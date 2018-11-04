@@ -5,7 +5,7 @@
 				'text' => $content
 			];
 			// Make a POST Request to Messaging API to reply to sender
-			$url = 'https://api.trello.com/1/cards?name=test&desc=test&idList=5bdc072ae0605e78a05a92c5&keepFromSource=all&key=de2dc6ea5b95210c5f7ab253415725f7&token=45abc962c53562b0610b6bcf1236ec645dfe9b1f01994469bd591393a1a23443';
+			$url = 'https://api.trello.com/1/cards?name=SCRIPTIONAPI&desc=APITEST&idList=5bdc072ae0605e78a05a92c5&keepFromSource=all&key=de2dc6ea5b95210c5f7ab253415725f7&token=45abc962c53562b0610b6bcf1236ec645dfe9b1f01994469bd591393a1a23443';
 			$data = [
 				'replyToken' => $replyToken,
 				'messages' => [$messages],
