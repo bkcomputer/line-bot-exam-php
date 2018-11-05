@@ -32,27 +32,22 @@ if (!is_null($events['events'])) {
 			$url .='&desc=';
 			$url .= urlencode($event['message']['text']);
 			
-			$board = "U71132754ed4afdf5f59079a51df281ad";
-			switch ($event['source']['userId']){
-				case 'U71132754ed4afdf5f59079a51df281ad'
-					$board = "5a544bc7b2f767692ac8d7f2";//rock
-				break;
-				case 'U380c91bd373503d6091d9cb6bab69dc9'
-					$board = "5a544bc7b2f767692ac8d7f3";//game
-				break;
-				case 'U1c56ba24ab998d75e24ed8086bec265e'
-					$board = "5a544bc7b2f767692ac8d7f4";//king
-				break;
-				case 'Uc91b7c0fb01650922aee6505bc4a12e4'
-					$board = "5bdfd26faf59144e2f02e590";//aun
-				break;
-				case 'Uc309235f42743a619d473be78771f7bd'
-					$board = "5bdfd2c5730ddf2d83ce5d5a";//zam
-				break;
-				case 'Ue5012e668f8c66f02959ac9c23cc3d4b'
-					$board = "5bdfd2be5398f03663e5f9c8";//bank
-				break;
+			$board = "";
+			if ($event['source']['userId'] == 'U71132754ed4afdf5f59079a51df281ad'){
+				$board = "5a544bc7b2f767692ac8d7f2";//rock
+			}else if ($event['source']['userId'] == 'U380c91bd373503d6091d9cb6bab69dc9'){
+				$board = "5a544bc7b2f767692ac8d7f3";//game
+			}else if ($event['source']['userId'] == 'U1c56ba24ab998d75e24ed8086bec265e'){
+				$board = "5a544bc7b2f767692ac8d7f4";//king
+			}else if ($event['source']['userId'] == 'Uc91b7c0fb01650922aee6505bc4a12e4'){
+				$board = "5bdfd26faf59144e2f02e590";//aun
+			}else if ($event['source']['userId'] == 'Uc309235f42743a619d473be78771f7bd'){
+				$board = "5bdfd2c5730ddf2d83ce5d5a";//zam
+			}else if ($event['source']['userId'] == 'Ue5012e668f8c66f02959ac9c23cc3d4b'){
+				$board = "5bdfd2be5398f03663e5f9c8";//bank
 			}
+			
+			
 			
 			
 			$url .='&idList=';
