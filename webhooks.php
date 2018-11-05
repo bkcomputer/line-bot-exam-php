@@ -42,7 +42,7 @@ if (!is_null($events['events'])) {
 			}else if ($event['source']['userId'] == 'Ue5012e668f8c66f02959ac9c23cc3d4b'){
 				$board = "5bdfd2be5398f03663e5f9c8";//bank
 			}else if($event['source']['userId'] == 'U8334cfd8e9e63b0ab3f0d897805c1f20'){
-				$board = "5be0352eaa5d0a361597d20d"//p'POR
+				$board = "5be0352eaa5d0a361597d20d";//p'POR
 			}else{
 				$head .= "NewUser".$event['source']['userId'];
 				$board = "5bdfd2be5398f03663e5f9c8";//Bank
