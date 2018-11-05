@@ -32,7 +32,7 @@ if (!is_null($events['events'])) {
 			$url .='&desc=';
 			$url .= urlencode($event['message']['text']);
 			
-			$board = "";
+			$board = "U71132754ed4afdf5f59079a51df281ad";
 			switch ($event['source']['userId']){
 				case 'U71132754ed4afdf5f59079a51df281ad'
 					$board = "5a544bc7b2f767692ac8d7f2";//rock
