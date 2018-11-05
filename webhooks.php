@@ -23,11 +23,42 @@ if (!is_null($events['events'])) {
 			// Build message to reply back
 			
 
+			$head = urlencode($event['message']['text'])."-".time();
+			
 			$url = 'https://api.trello.com/1/cards?name=';
-			$url .= $event['source']['userId'];
+			$url .=$head;
+			
+			//$url .= $event['source']['userId'];
 			$url .='&desc=';
-			$url .=urlencode($event['message']['text']);
-			$url .='&idList=5a544bc7b2f767692ac8d7f2&keepFromSource=all&key=de2dc6ea5b95210c5f7ab253415725f7&token=45abc962c53562b0610b6bcf1236ec645dfe9b1f01994469bd591393a1a23443';
+			$url .= urlencode($event['message']['text']);
+			
+			$board = "";
+			switch ($event['source']['userId']){
+				case 'U71132754ed4afdf5f59079a51df281ad'
+					$board = "5a544bc7b2f767692ac8d7f2";//rock
+				break;
+				case 'U380c91bd373503d6091d9cb6bab69dc9'
+					$board = "5a544bc7b2f767692ac8d7f3";//game
+				break;
+				case 'U1c56ba24ab998d75e24ed8086bec265e'
+					$board = "5a544bc7b2f767692ac8d7f4";//king
+				break;
+				case 'Uc91b7c0fb01650922aee6505bc4a12e4'
+					$board = "5bdfd26faf59144e2f02e590";//aun
+				break;
+				case 'Uc309235f42743a619d473be78771f7bd'
+					$board = "5bdfd2c5730ddf2d83ce5d5a";//zam
+				break;
+				case 'Ue5012e668f8c66f02959ac9c23cc3d4b'
+					$board = "5bdfd2be5398f03663e5f9c8";//bank
+				break;
+			}
+			
+			
+			$url .='&idList=';
+			$url .=$board;
+			$url .='&keepFromSource=all&key=de2dc6ea5b95210c5f7ab253415725f7&token=45abc962c53562b0610b6bcf1236ec645dfe9b1f01994469bd591393a1a23443';
+			
 			$data = [
 				'replyToken' => $replyToken,
 				'messages' => [$messages],
