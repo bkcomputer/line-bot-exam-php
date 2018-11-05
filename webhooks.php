@@ -21,10 +21,7 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 
 			// Build message to reply back
-			$messages = [
-				'type' => 'text',
-				'text' => $event['message']['text']//$content
-			];
+			
 
 			$url = 'https://api.trello.com/1/cards?name=';
 			$url .= $event['source']['userId'];
@@ -46,6 +43,13 @@ if (!is_null($events['events'])) {
 			$result = curl_exec($ch);
 			curl_close($ch);
 			
+			
+			$respones = json_decode($result, true);
+			
+			$messages = [
+				'type' => 'text',
+				'text' => $respones['url']//$content
+			];
 			
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
