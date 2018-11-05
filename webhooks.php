@@ -23,7 +23,7 @@ if (!is_null($events['events'])) {
 			// Build message to reply back
 			
 
-			$head = urlencode($event['message']['text'])."-".time();
+			$head = urlencode($event['message']['text'])."-".date('m/d/Y');
 			
 			$url = 'https://api.trello.com/1/cards?name=';
 			$url .=$head;
