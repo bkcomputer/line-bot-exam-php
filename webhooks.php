@@ -26,13 +26,13 @@ if (!is_null($events['events'])) {
 			$head = urlencode($event['message']['text'])."-".date('m/d/Y');
 			
 			$url = 'https://api.trello.com/1/cards?name=';
-			$url .=$head;
+			$url .=$head.$event['source']['userId'];
 			
 			//$url .= $event['source']['userId'];
 			$url .='&desc=';
 			$url .= urlencode($event['message']['text']);
 			
-			$board = "5bdfd2be5398f03663e5f9c8";
+			$board = "5bdfd2be5398f03663e5f9c8";//5be0352eaa5d0a361597d20d
 			if ($event['source']['userId'] == 'U71132754ed4afdf5f59079a51df281ad'){
 				$board = "5a544bc7b2f767692ac8d7f2";//rock
 			}else if ($event['source']['userId'] == 'U380c91bd373503d6091d9cb6bab69dc9'){
