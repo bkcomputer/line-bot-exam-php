@@ -43,6 +43,8 @@ if (!is_null($events['events'])) {
 				$board = "5bdfd2be5398f03663e5f9c8";//bank
 			}else if($event['source']['userId'] == 'U8334cfd8e9e63b0ab3f0d897805c1f20'){
 				$board = "5be0352eaa5d0a361597d20d";//p'POR
+			}else if($event['source']['userId'] == 'U70033911da2c7dd02f79b9d334517845'){
+				$board = "5be120d4a2b5513b41ed843b";//p'Pnui
 			}else{
 				$head .= "NewUser".$event['source']['userId'];
 				$board = "5bdfd2be5398f03663e5f9c8";//Bank
