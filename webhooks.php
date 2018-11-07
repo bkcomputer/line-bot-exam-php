@@ -35,24 +35,18 @@ if (!is_null($events['events'])) {
 			
 			/* $board = "";//Bank
 			if ($event['source']['userId'] == 'U71132754ed4afdf5f59079a51df281ad'){
-				$board = "5a544bc7b2f767692ac8d7f2";//rock
+				$board = "5be2658aa5b1b615863f6d45";//PM
 			}else if ($event['source']['userId'] == 'U380c91bd373503d6091d9cb6bab69dc9'){
-				$board = "5a544bc7b2f767692ac8d7f3";//game
+				$board = "5be26448b284fe18ca0f60e4";//Design
 			}else if ($event['source']['userId'] == 'U1c56ba24ab998d75e24ed8086bec265e'){
-				$board = "5a544bc7b2f767692ac8d7f4";//king
+				$board = "5be26421e7ef14154e8e1719";//IOS
 			}else if ($event['source']['userId'] == 'Uc91b7c0fb01650922aee6505bc4a12e4'){
-				$board = "5bdfd26faf59144e2f02e590";//aun
+				$board = "5be2642571a7725bc73d523b";//Android
 			}else if ($event['source']['userId'] == 'Uc309235f42743a619d473be78771f7bd'){
-				$board = "5bdfd2c5730ddf2d83ce5d5a";//zam
-			}else if ($event['source']['userId'] == 'Ue5012e668f8c66f02959ac9c23cc3d4b'){
-				$board = "5bdfd2be5398f03663e5f9c8";//bank
-			}else if($event['source']['userId'] == 'U8334cfd8e9e63b0ab3f0d897805c1f20'){
-				$board = "5be0352eaa5d0a361597d20d";//p'POR
-			}else if($event['source']['userId'] == 'U70033911da2c7dd02f79b9d334517845'){
-				$board = "5be120d4a2b5513b41ed843b";//p'Pnui
+				$board = "5be264422464ad09fa4116bf";//CMS
 			}else{
 				$head .= "NewUser".$event['source']['userId'];
-				$board = "5bdfd2be5398f03663e5f9c8";//Bank
+				$board = "5be2658aa5b1b615863f6d45";//Bank
 			}
 			$url = 'https://api.trello.com/1/cards?name=';
 			$url .=$head;
