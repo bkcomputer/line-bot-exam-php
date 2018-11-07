@@ -26,28 +26,31 @@ if (!is_null($events['events'])) {
 			$head = urlencode($event['message']['text'])."-".date('m/d/Y');
 			
 			
-			//5be2658aa5b1b615863f6d45 PM
-			//5be26448b284fe18ca0f60e4 Design
-			//5be26421e7ef14154e8e1719 IOS
-			//5be2642571a7725bc73d523b Android
-			//5be264422464ad09fa4116bf CMS
-			
-			
-			/* $board = "";//Bank
-			if ($event['source']['userId'] == 'U71132754ed4afdf5f59079a51df281ad'){
-				$board = "5be2658aa5b1b615863f6d45";//PM
-			}else if ($event['source']['userId'] == 'U380c91bd373503d6091d9cb6bab69dc9'){
-				$board = "5be26448b284fe18ca0f60e4";//Design
-			}else if ($event['source']['userId'] == 'U1c56ba24ab998d75e24ed8086bec265e'){
-				$board = "5be26421e7ef14154e8e1719";//IOS
-			}else if ($event['source']['userId'] == 'Uc91b7c0fb01650922aee6505bc4a12e4'){
-				$board = "5be2642571a7725bc73d523b";//Android
-			}else if ($event['source']['userId'] == 'Uc309235f42743a619d473be78771f7bd'){
-				$board = "5be264422464ad09fa4116bf";//CMS
+			//5be2658aa5b1b615863f6d45 PM @Monster_P @BANK DEV
+			//5be26448b284fe18ca0f60e4 Design @Pure
+			//5be26421e7ef14154e8e1719 IOS @Ton
+			//5be2642571a7725bc73d523b Android @iSymphonyz
+			//5be264422464ad09fa4116bf CMS @เสี่ยหมี
+		
+			$board = "";
+			if (strpos($event['message']['text'], '@Monster_P') !== false) {
+			    $board = "5be2658aa5b1b615863f6d45";
+			}else if (strpos($event['message']['text'], '@BANK DEV') !== false) {
+			     $board = "5be2658aa5b1b615863f6d45";
+			}else if (strpos($event['message']['text'], '@Pure') !== false) {
+			    $board = "5be26448b284fe18ca0f60e4";
+			}else if (strpos($event['message']['text'], '@Ton') !== false) {
+			    $board = "5be26421e7ef14154e8e1719";
+			}else if (strpos($event['message']['text'], '@iSymphonyz') !== false) {
+			    $board = "5be2642571a7725bc73d523b";
+			}else if (strpos($event['message']['text'], '@เสี่ยหมี') !== false) {
+			    $board = "5be264422464ad09fa4116bf";
 			}else{
-				$head .= "NewUser".$event['source']['userId'];
-				$board = "5be2658aa5b1b615863f6d45";//Bank
+			    $board = "5be2658aa5b1b615863f6d45";
 			}
+			
+			
+			
 			$url = 'https://api.trello.com/1/cards?name=';
 			$url .=$head;
 			
@@ -77,10 +80,10 @@ if (!is_null($events['events'])) {
 			
 			
 			$respones = json_decode($result, true);
-			*/
+			
 			$messages = [
 				'type' => 'text',
-				'text' => $content//$respones['shortUrl']//$content
+				'text' => $respones['shortUrl']//$content
 			];
 			
 			
