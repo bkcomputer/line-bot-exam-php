@@ -26,9 +26,14 @@ if (!is_null($events['events'])) {
 			$head = urlencode($event['message']['text'])."-".date('m/d/Y');
 			
 			
+			//5be2658aa5b1b615863f6d45 PM
+			//5be26448b284fe18ca0f60e4 Design
+			//5be26421e7ef14154e8e1719 IOS
+			//5be2642571a7725bc73d523b Android
+			//5be264422464ad09fa4116bf CMS
 			
 			
-			$board = "";//Bank
+			/* $board = "";//Bank
 			if ($event['source']['userId'] == 'U71132754ed4afdf5f59079a51df281ad'){
 				$board = "5a544bc7b2f767692ac8d7f2";//rock
 			}else if ($event['source']['userId'] == 'U380c91bd373503d6091d9cb6bab69dc9'){
@@ -78,11 +83,13 @@ if (!is_null($events['events'])) {
 			
 			
 			$respones = json_decode($result, true);
-			
+			*/
 			$messages = [
 				'type' => 'text',
-				'text' => $respones['shortUrl']//$content
+				'text' => $content//$respones['shortUrl']//$content
 			];
+			
+			
 			
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
