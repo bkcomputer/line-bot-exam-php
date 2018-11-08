@@ -47,8 +47,8 @@ if (!is_null($events['events'])) {
 			if (strpos($event['message']['text'], '@Monster_P') !== false) {
 			    $board = "5be2658aa5b1b615863f6d45";
 				
-				$url = 'https://api.trello.com/1/cards?name=@Monster_P#';
-			$url .=$head;
+				$url = 'https://api.trello.com/1/cards?name=';
+			$url .= urlencode('@Monster_P').$head;
 			
 			//$url .= $event['source']['userId'];
 			$url .='&desc=';
@@ -110,8 +110,8 @@ if (!is_null($events['events'])) {
 			} if (strpos($event['message']['text'], '@BANK DEV') !== false) {
 			     $board = "5be2658aa5b1b615863f6d45";
 				
-				$url = 'https://api.trello.com/1/cards?name=@BANK DEV#';
-			$url .=$head;
+				$url = 'https://api.trello.com/1/cards?name=';
+			$url .= urlencode('@BANK DEV').$head;
 			
 			//$url .= $event['source']['userId'];
 			$url .='&desc=';
@@ -173,8 +173,8 @@ if (!is_null($events['events'])) {
 			} if (strpos($event['message']['text'], '@Pure') !== false) {
 			    $board = "5be26448b284fe18ca0f60e4";
 				
-				$url = 'https://api.trello.com/1/cards?name=@Pure#';
-			$url .=$head;
+				$url = 'https://api.trello.com/1/cards?name=';
+			$url .= urlencode('@Pure').$head;
 			
 			//$url .= $event['source']['userId'];
 			$url .='&desc=';
@@ -236,8 +236,8 @@ if (!is_null($events['events'])) {
 			} if (strpos($event['message']['text'], '@Ton') !== false) {
 			    $board = "5be26421e7ef14154e8e1719";
 				
-				$url = 'https://api.trello.com/1/cards?name=@Ton#';
-			$url .=$head;
+				$url = 'https://api.trello.com/1/cards?name=';
+			$url .= urlencode('@Ton').$head;
 			
 			//$url .= $event['source']['userId'];
 			$url .='&desc=';
@@ -299,8 +299,8 @@ if (!is_null($events['events'])) {
 			} if (strpos($event['message']['text'], '@iSymphonyz') !== false) {
 			    $board = "5be2642571a7725bc73d523b";
 				
-				$url = 'https://api.trello.com/1/cards?name=@iSymphonyz#';
-			$url .=$head;
+				$url = 'https://api.trello.com/1/cards?name=';
+			$url .= urlencode('@iSymphonyz').$head;
 			
 			//$url .= $event['source']['userId'];
 			$url .='&desc=';
@@ -362,8 +362,8 @@ if (!is_null($events['events'])) {
 			} if (strpos($event['message']['text'], '@เสี่ยหมี') !== false) {
 			    $board = "5be264422464ad09fa4116bf";
 				
-				$url = 'https://api.trello.com/1/cards?name=@เสี่ยหมี#';
-			$url .=$head;
+				$url = 'https://api.trello.com/1/cards?name=';
+			$url .= urlencode('@เสี่ยหมี').$head;
 			
 			//$url .= $event['source']['userId'];
 			$url .='&desc=';
@@ -425,8 +425,8 @@ if (!is_null($events['events'])) {
 			} if (strpos($event['message']['text'], '@KinG`Genesis') !== false) {
 			    $board = "5be264422464ad09fa4116bf";
 				
-				$url = 'https://api.trello.com/1/cards?name=@KinG`Genesis#';
-			$url .=$head;
+				$url = 'https://api.trello.com/1/cards?name=';
+			$url .= urlencode('@KinG`Genesis').$head;
 			
 			//$url .= $event['source']['userId'];
 			$url .='&desc=';
