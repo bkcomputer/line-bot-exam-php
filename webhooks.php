@@ -22,8 +22,19 @@ if (!is_null($events['events'])) {
 
 			// Build message to reply back
 			
+			
+			$fullText = $event['message']['text'];
+			
+			$fullText = str_replace( '@Monster_P', '', $fullText);
+			$fullText = str_replace( '@BANK DEV', '', $fullText);
+			$fullText = str_replace( '@Pure', '', $fullText);
+			$fullText = str_replace( '@Ton', '', $fullText);
+			$fullText = str_replace( '@iSymphonyz', '', $fullText);
+			$fullText = str_replace( '@เสี่ยหมี', '', $fullText);
+			$fullText = str_replace( '@KinG`Genesis', '', $fullText);
+			
 
-			$head = urlencode($event['message']['text'])."-".date('m/d/Y');
+			$head = urlencode($fullText)."-".date('m/d/Y');
 			
 			
 			//5be2658aa5b1b615863f6d45 PM @Monster_P @BANK DEV
@@ -59,15 +70,7 @@ if (!is_null($events['events'])) {
 			//$url .= $event['source']['userId'];
 			$url .='&desc=';
 			
-			$fullText = $event['message']['text'];
 			
-			$fullText = str_replace( '@Monster_P', '', $fullText);
-			$fullText = str_replace( '@BANK DEV', '', $fullText);
-			$fullText = str_replace( '@Pure', '', $fullText);
-			$fullText = str_replace( '@Ton', '', $fullText);
-			$fullText = str_replace( '@iSymphonyz', '', $fullText);
-			$fullText = str_replace( '@เสี่ยหมี', '', $fullText);
-			$fullText = str_replace( '@KinG`Genesis', '', $fullText);
 			
 			$url .= urlencode($fullText);
 			
