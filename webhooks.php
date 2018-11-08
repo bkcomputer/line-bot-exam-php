@@ -69,7 +69,7 @@ if (!is_null($events['events'])) {
 			$fullText = str_replace( '@เสี่ยหมี', '', $fullText);
 			$fullText = str_replace( '@KinG`Genesis', '', $fullText);
 			
-			$url .= urlencode($event['message']['text']);
+			$url .= urlencode($fullText);
 			
 			
 			$url .='&idList=';
@@ -78,7 +78,7 @@ if (!is_null($events['events'])) {
 			
 			$data = [
 				'replyToken' => $replyToken,
-				'messages' => [$messages],
+				'messages' => [$fullText],
 			];
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
