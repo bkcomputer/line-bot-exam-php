@@ -61,13 +61,13 @@ if (!is_null($events['events'])) {
 			
 			$fullText = $event['message']['text'];
 			
-			$fullText = str_replace( ['', '@Monster_P'], '', $fullText);
-			$fullText = str_replace( ['', '@BANK DEV'], '', $fullText);
-			$fullText = str_replace( ['', '@Pure'], '', $fullText);
-			$fullText = str_replace( ['', '@Ton'], '', $fullText);
-			$fullText = str_replace( ['', '@iSymphonyz'], '', $fullText);
-			$fullText = str_replace( ['', '@เสี่ยหมี'], '', $fullText);
-			$fullText = str_replace( ['', '@KinG`Genesis'], '', $fullText);
+			$fullText = str_replace( '@Monster_P', '', $fullText);
+			$fullText = str_replace( '@BANK DEV', '', $fullText);
+			$fullText = str_replace( '@Pure', '', $fullText);
+			$fullText = str_replace( '@Ton', '', $fullText);
+			$fullText = str_replace( '@iSymphonyz', '', $fullText);
+			$fullText = str_replace( '@เสี่ยหมี', '', $fullText);
+			$fullText = str_replace( '@KinG`Genesis', '', $fullText);
 			
 			$url .= urlencode($event['message']['text']);
 			
