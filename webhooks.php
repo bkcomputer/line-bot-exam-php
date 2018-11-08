@@ -14,7 +14,7 @@ if (!is_null($events['events'])) {
 	// Loop through each event
 	foreach ($events['events'] as $event) {
 		// Reply only when message sent is in 'text' format
-		//if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
+		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent
 			$text = $event['source']['userId'];
 			// Get replyToken
@@ -30,7 +30,7 @@ if (!is_null($events['events'])) {
 			//5be26448b284fe18ca0f60e4 Design @Pure
 			//5be26421e7ef14154e8e1719 IOS @Ton
 			//5be2642571a7725bc73d523b Android @iSymphonyz
-			//5be264422464ad09fa4116bf CMS @เสี่ยหมี
+			//5be264422464ad09fa4116bf CMS @เสี่ยหมี @KinG`Genesis
 		
 			$board = "";
 			if (strpos($event['message']['text'], '@Monster_P') !== false) {
@@ -45,6 +45,8 @@ if (!is_null($events['events'])) {
 			    $board = "5be2642571a7725bc73d523b";
 			}else if (strpos($event['message']['text'], '@เสี่ยหมี') !== false) {
 			    $board = "5be264422464ad09fa4116bf";
+			}else if (strpos($event['message']['text'], '@KinG`Genesis') !== false) {
+			    $board = "5be264422464ad09fa4116bf";
 			}else{
 			    $board = "5be2658aa5b1b615863f6d45";
 			}
@@ -56,6 +58,17 @@ if (!is_null($events['events'])) {
 			
 			//$url .= $event['source']['userId'];
 			$url .='&desc=';
+			
+			$fullText = $event['message']['text'];
+			
+			$fullText = str_replace( ['', '@Monster_P'], '', $fullText);
+			$fullText = str_replace( ['', '@BANK DEV'], '', $fullText);
+			$fullText = str_replace( ['', '@Pure'], '', $fullText);
+			$fullText = str_replace( ['', '@Ton'], '', $fullText);
+			$fullText = str_replace( ['', '@iSymphonyz'], '', $fullText);
+			$fullText = str_replace( ['', '@เสี่ยหมี'], '', $fullText);
+			$fullText = str_replace( ['', '@KinG`Genesis'], '', $fullText);
+			
 			$url .= urlencode($event['message']['text']);
 			
 			
@@ -107,7 +120,7 @@ if (!is_null($events['events'])) {
 			curl_close($ch);
 
 			echo $result . "\r\n";
-		//}
+		}
 	}
 }
 echo "OK";
