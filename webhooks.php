@@ -23,7 +23,7 @@ if (!is_null($events['events'])) {
 			// Build message to reply back
 			
 
-			$head = urlencode($event['message']['text'])."-".date('m/d/Y');
+			//$head = urlencode($event['message']['text'])."-".date('m/d/Y');
 			
 			
 			
