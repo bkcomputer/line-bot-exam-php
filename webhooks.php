@@ -423,10 +423,7 @@ if (!is_null($events['events'])) {
 
 			echo $result . "\r\n";
 				
-			} else{
-// 			    $board = "5be2658aa5b1b615863f6d45";
-			
-// 			}
+			} 
 			
 			
 			
