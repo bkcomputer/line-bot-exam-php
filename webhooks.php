@@ -4,6 +4,10 @@ require "vendor/autoload.php";
 require_once('vendor/linecorp/line-bot-sdk/line-bot-sdk-tiny/LINEBotTiny.php');
 
 $access_token = '/rx52zV39CbiEnDSoo7/V1P+qd+iS1TI2w7mCMpAvSmTaeRXb32vbptmmWoiNQvvQfPG3W6xkDneCqv2YAzRyUeBzZROnNdgspO6XULmWO1ZGURnWLB9Gvjj6IQf/waChd+PoS0m1mf+uQmviaGWpgdB04t89/1O/w1cDnyilFU=';
+//5bdfd2be5398f03663e5f9c8 Bank
+//5be6b88701327a4ed47f251c Multi
+
+
 
 // Get POST body content
 $content = file_get_contents('php://input');
@@ -14,7 +18,7 @@ if (!is_null($events['events'])) {
 	// Loop through each event
 	foreach ($events['events'] as $event) {
 		// Reply only when message sent is in 'text' format
-		if (true) {
+		if ($event['message']['type'] == 'sticker') {
 			// Get text sent
 			$text = $event['source']['userId'];
 			// Get replyToken
@@ -56,5 +60,6 @@ if (!is_null($events['events'])) {
 			echo $result . "\r\n";
 		}
 	}
+	//https://developers.trello.com/v1.0/reference#listsidmoveallcards
 }
 echo "OK";
