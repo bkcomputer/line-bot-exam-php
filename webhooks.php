@@ -31,6 +31,7 @@ if (!is_null($events['events'])) {
 			$fullText = str_replace( '@North', '', $fullText);
 			$fullText = str_replace( '@けんじ', '', $fullText);
 			$fullText = str_replace( '@เสี่ยหมี', '', $fullText);
+			$fullText = str_replace( '@Poo_za', '', $fullText);
 			
 			
 
@@ -46,7 +47,7 @@ if (!is_null($events['events'])) {
 		
 			$board = "";
 			if (strpos($event['message']['text'], '@➰°PookPick°➿') !== false) {
-			    $board = "5be2658aa5b1b615863f6d45";
+			    $board = "5bdc072ae0605e78a05a92c5";
 				
 				$url = 'https://api.trello.com/1/cards?name=';
 			$url .= urlencode('@➰°PookPick°➿').$head;
@@ -109,7 +110,7 @@ if (!is_null($events['events'])) {
 			echo $result . "\r\n";
 			
 			} if (strpos($event['message']['text'], '@BANK DEV') !== false) {
-			     $board = "5be2658aa5b1b615863f6d45";
+			     $board = "5bdc072ae0605e78a05a92c5";
 				
 				$url = 'https://api.trello.com/1/cards?name=';
 			$url .= urlencode('@BANK DEV').$head;
@@ -172,7 +173,7 @@ if (!is_null($events['events'])) {
 			echo $result . "\r\n";
 				
 			} if (strpos($event['message']['text'], '@Pure') !== false) {
-			    $board = "5be26448b284fe18ca0f60e4";
+			    $board = "5bdc0ae66e82f44f8dc9506b";
 				
 				$url = 'https://api.trello.com/1/cards?name=';
 			$url .= urlencode('@Pure').$head;
@@ -235,7 +236,7 @@ if (!is_null($events['events'])) {
 			echo $result . "\r\n";
 				
 			} if (strpos($event['message']['text'], '@North') !== false) {
-			    $board = "5be26421e7ef14154e8e1719";
+			    $board = "5bdc0730f8bb4e8b70992f25";
 				
 				$url = 'https://api.trello.com/1/cards?name=';
 			$url .= urlencode('@North').$head;
@@ -298,7 +299,7 @@ if (!is_null($events['events'])) {
 			echo $result . "\r\n";
 				
 			} if (strpos($event['message']['text'], '@けんじ') !== false) {
-			    $board = "5be2642571a7725bc73d523b";
+			    $board = "5bdc0927cf837652b9c2e2b1";
 				
 				$url = 'https://api.trello.com/1/cards?name=';
 			$url .= urlencode('@けんじ').$head;
@@ -361,7 +362,7 @@ if (!is_null($events['events'])) {
 			echo $result . "\r\n";
 				
 			} if (strpos($event['message']['text'], '@เสี่ยหมี') !== false) {
-			    $board = "5be264422464ad09fa4116bf";
+			    $board = "5bdc073f5622911911691960";
 				
 				$url = 'https://api.trello.com/1/cards?name=';
 			$url .= urlencode('@เสี่ยหมี').$head;
@@ -424,7 +425,70 @@ if (!is_null($events['events'])) {
 			echo $result . "\r\n";
 				
 			} 
+			if (strpos($event['message']['text'], '@Poo_za') !== false) {
+			    $board = "5bdc07424a0dda5b0a113620";
+				
+				$url = 'https://api.trello.com/1/cards?name=';
+			$url .= urlencode('@Poo_za').$head;
 			
+			//$url .= $event['source']['userId'];
+			$url .='&desc=';
+			
+			
+			
+			$url .= urlencode($fullText);
+			
+			
+			$url .='&idList=';
+			$url .=$board;
+			$url .='&keepFromSource=all&key=de2dc6ea5b95210c5f7ab253415725f7&token=45abc962c53562b0610b6bcf1236ec645dfe9b1f01994469bd591393a1a23443';
+			
+			$data = [
+				'replyToken' => $replyToken,
+				'messages' => [$fullText],
+			];
+			$post = json_encode($data);
+			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+			$ch = curl_init($url);
+			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+			curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+			$result = curl_exec($ch);
+			curl_close($ch);
+			
+			
+			$respones = json_decode($result, true);
+			
+			$messages = [
+				'type' => 'text',
+				'text' => $respones['shortUrl']//$content
+			];
+			
+			
+			
+			// Make a POST Request to Messaging API to reply to sender
+			$url = 'https://api.line.me/v2/bot/message/reply';
+			$data = [
+				'replyToken' => $replyToken,
+				'messages' => [$messages],
+			];
+			$post = json_encode($data);
+			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+
+			$ch = curl_init($url);
+			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+			curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+			$result = curl_exec($ch);
+			curl_close($ch);
+
+			echo $result . "\r\n";
+				
+			} 
 			
 			
 			
