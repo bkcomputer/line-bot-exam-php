@@ -25,6 +25,36 @@ if (!is_null($events['events'])) {
 		// Reply only when message sent is in 'text' format
 		if ($event['message']['type'] == 'sticker') {
 			// Get text sent
+			
+			$url = "https://api.trello.com/1/lists/5be6b88701327a4ed47f251c/cards"
+			# init curl
+			$ch = curl_init();
+			curl_setopt($ch, CURLOPT_URL, $url);
+			//curl_setopt($ch, CURLOPT_POSTFIELDS, $encoded_fields);
+			curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0)");
+			curl_setopt($ch, CURLOPT_HEADER, 1);
+			curl_setopt($ch, CURLINFO_HEADER_OUT, TRUE); // make sure we see the sended header afterwards
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+			//curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+			curl_setopt($ch, CURLOPT_TIMEOUT, 0);
+			//curl_setopt($ch, CURLOPT_POST, 1);
+			# dont care about ssl
+			curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+			# download and close
+			$output = curl_exec($ch);
+			$request =  curl_getinfo($ch, CURLINFO_HEADER_OUT);
+			$error = curl_error($ch);
+			
+			
+			
+			curl_close($ch);
+			
+			
+			echo 'This is output = '.$output .'<br />';
+			//echo 'This is request = '.$request .'<br />';
+			//echo 'This is error = '.$error .'<br />';
+				
+				
 			$text = $event['source']['userId'];
 			// Get replyToken
 			$replyToken = $event['replyToken'];
