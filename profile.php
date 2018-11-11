@@ -19,7 +19,7 @@ curl_close($ch);
 $path = date('d_h_i_s').'.jpg';
 
 file_put_contents($path, $result);
-echo $path;
+//echo $path;
 
 ?>
 <?php
