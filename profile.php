@@ -24,36 +24,39 @@ file_put_contents($path, $result);
 ?>
 <?php
 
-
- $cfile = curl_file_create('$path','image/jpg','image_field');
+$cfile = curl_file_create($path,'image/jpg','file');
         $data = array(
             'section' => 'save',
             'field1' => 'example1',
             'field2' => '20171022',
-            'file' => '@'.$cfile
+            'file' => $cfile
         );
+$url = 'https://api.trello.com/1/cards/5be6ea2338cc804e19b8f71b/attachments?key=de2dc6ea5b95210c5f7ab253415725f7&token=45abc962c53562b0610b6bcf1236ec645dfe9b1f01994469bd591393a1a23443';
 
-//curl -v -F token={45abc962c53562b0610b6bcf1236ec645dfe9b1f01994469bd591393a1a23443} -F file=@test.pdf https://api.trello.com/1/cards/5be6ea2338cc804e19b8f71b/attachments\?key\={de2dc6ea5b95210c5f7ab253415725f7}\&token\={45abc962c53562b0610b6bcf1236ec645dfe9b1f01994469bd591393a1a23443}
-//curl -v -F token=45abc962c53562b0610b6bcf1236ec645dfe9b1f01994469bd591393a1a23443 -F file=@11_04_40_38.jpg https://api.trello.com/1/cards/5be6ea2338cc804e19b8f71b/attachments\?key\=de2dc6ea5b95210c5f7ab253415725f7\&token\=45abc962c53562b0610b6bcf1236ec645dfe9b1f01994469bd591393a1a23443
+# init curl
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, $url);
+//curl_setopt($ch, CURLOPT_POSTFIELDS, $encoded_fields);
+curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0)");
+curl_setopt($ch, CURLOPT_HEADER, 1);
+curl_setopt($ch, CURLINFO_HEADER_OUT, TRUE); // make sure we see the sended header afterwards
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+curl_setopt($ch, CURLOPT_TIMEOUT, 0);
+//curl_setopt($ch, CURLOPT_POST, 1);
 
+# dont care about ssl
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 
+# download and close
+$output = curl_exec($ch);
+$request =  curl_getinfo($ch, CURLINFO_HEADER_OUT);
+$error = curl_error($ch);
+curl_close($ch);
 
-//curl -v -F token=45abc962c53562b0610b6bcf1236ec645dfe9b1f01994469bd591393a1a23443 -F file=@11_04_40_38.jpg https://api.trello.com/1/cards/5be6ea2338cc804e19b8f71b/attachments\?key\=de2dc6ea5b95210c5f7ab253415725f7\&token\=45abc962c53562b0610b6bcf1236ec645dfe9b1f01994469bd591393a1a23443
-        $target="https://api.trello.com/1/cards/5be6ea2338cc804e19b8f71b/attachments\?key\=de2dc6ea5b95210c5f7ab253415725f7\&token\=45abc962c53562b0610b6bcf1236ec645dfe9b1f01994469bd591393a1a23443";
-
-        $curl = curl_init();
-        curl_setopt($curl, CURLOPT_URL, $target);
-        curl_setopt($curl, CURLOPT_USERAGENT,'Opera/9.80 (Windows NT 6.2; Win64; x64) Presto/2.12.388 Version/12.15');
-        curl_setopt($curl, CURLOPT_HTTPHEADER,array('User-Agent: Opera/9.80 (Windows NT 6.2; Win64; x64) Presto/2.12.388 Version/12.15','Referer: http://someaddress.tld','Content-Type: multipart/form-data'));
-        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false); // stop verifying certificate
-        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true); 
-        curl_setopt($curl, CURLOPT_COOKIEFILE, '/tmp/'.$cookie_file);
-        curl_setopt($curl, CURLOPT_POST, true); // enable posting
-        curl_setopt($curl, CURLOPT_POSTFIELDS, $data); // post images 
-        curl_setopt($curl, CURLOPT_FOLLOWLOCATION, true); // if any redirection after upload
-        $r = curl_exec($curl); 
-        curl_close($curl);
-echo print_r($r);
+echo 'This is output = '.$output .'<br />';
+echo 'This is request = '.$request .'<br />';
+echo 'This is error = '.$error .'<br />';
 
 /*
 $access_token = '/rx52zV39CbiEnDSoo7/V1P+qd+iS1TI2w7mCMpAvSmTaeRXb32vbptmmWoiNQvvQfPG3W6xkDneCqv2YAzRyUeBzZROnNdgspO6XULmWO1ZGURnWLB9Gvjj6IQf/waChd+PoS0m1mf+uQmviaGWpgdB04t89/1O/w1cDnyilFU=';
