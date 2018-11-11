@@ -16,7 +16,7 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 $result = curl_exec($ch);
 curl_close($ch);
-$path = date('h:i:s').'.jpg';
+$path = date('d_h_i_s').'.jpg';
 
 file_put_contents($path, $result);
 echo $path;
