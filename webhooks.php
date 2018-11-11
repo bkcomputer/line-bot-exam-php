@@ -50,7 +50,7 @@ if (!is_null($events['events'])) {
 			curl_close($ch);
 			
 			
-			echo 'This is output = '.$output .'<br />';
+			//echo 'This is output = '.$output .'<br />';
 			//echo 'This is request = '.$request .'<br />';
 			//echo 'This is error = '.$error .'<br />';
 				
@@ -71,7 +71,7 @@ if (!is_null($events['events'])) {
 			
 			$messages = [
 				'type' => 'text',
-				'text' => $content
+				'text' => 'This is output = '.$output .'<br />'//$content
 			];
 			
 			// Make a POST Request to Messaging API to reply to sender
