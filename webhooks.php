@@ -7,10 +7,11 @@ require_once('vendor/linecorp/line-bot-sdk/line-bot-sdk-tiny/LINEBotTiny.php');
 
 $time = strtotime('10/16/2003');
 
-$newformat = date('Y-m-d',$time);
+//$newformat = date('Y-m-d',$time);
 
-echo $newformat;
-$due = urlencode(date('Y-m-d H:i:s', $newformat + (86400)));
+//echo $newformat;
+$due = urlencode(date('Y-m-d H:i:s', $time + (86400)));
+echo $due;
 exit;
 
 $access_token = 'DhVVKfid34tkEUBjY9rliuvWiNA4QPAe1XrsijIoaOXq9dzFUlUGLBp8lUYnXN5hZQ2aWtKfMm9sj+KvlI9yE1I5mNTh6pX3Md1HHDaqj7MlgX1tzQWEXvXGvrbEpGI10yWrMjcaWfmVq+Igit422gdB04t89/1O/w1cDnyilFU=';
