@@ -37,7 +37,30 @@ if (!is_null($events['events'])) {
 		
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text' && strpos($event['message']['text'], 'due') !== false ) {//&& (strpos($event['message']['text'], 'due') !== false)
 			// Get text sent
+			$text = $event['source']['userId'];
+			// Get replyToken
+                        $replyToken = $event['replyToken'];
+			
 			if(!checkIsAValidDate($time)){
+				
+				$url = 'https://api.line.me/v2/bot/message/reply';
+			$data = [
+				'replyToken' => $replyToken,
+				'messages' => ["due date incorrect."],
+			];
+			$post = json_encode($data);
+			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+
+			$ch = curl_init($url);
+			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+			curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+			$result = curl_exec($ch);
+			curl_close($ch);
+
+			echo $result . "\r\n";
 				
 			}else{
 			
@@ -49,7 +72,7 @@ if (!is_null($events['events'])) {
 			//$newformat = date('Y-m-d',$time);
 
 			//echo $newformat;
-            $duedate = urlencode(date('Y-m-d H:i:s', strtotime($time) + (86400)));
+                        $duedate = urlencode(date('Y-m-d H:i:s', strtotime($time) + (86400)));
             
 
 
@@ -59,9 +82,7 @@ if (!is_null($events['events'])) {
             
 			
 			
-			$text = $event['source']['userId'];
-			// Get replyToken
-            $replyToken = $event['replyToken'];
+			
             
 
 
