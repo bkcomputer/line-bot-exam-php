@@ -122,7 +122,7 @@ if (!is_null($events['events'])) {
 				
 			
 
-			$head = urlencode($fullText)."- Assign Date -".date('Y/m/d');
+			$head = urlencode($fullText)."-".date('Y/m/d');
 			
             
             
