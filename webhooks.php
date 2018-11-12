@@ -5,11 +5,8 @@
 require "vendor/autoload.php";
 require_once('vendor/linecorp/line-bot-sdk/line-bot-sdk-tiny/LINEBotTiny.php');
 
-function validateDate($date, $format = 'Y-m-d')
-{
-    $d = DateTime::createFromFormat($format, $date);
-    // The Y ( 4 digits year ) returns TRUE for any integer with any number of digits so changing the comparison from == to === fixes the issue.
-    return $d && $d->format($format) === $date;
+function checkIsAValidDate($myDateString){
+    return (bool)strtotime($myDateString);
 }
 
 
@@ -30,7 +27,7 @@ if (!is_null($events['events'])) {
 		//$time = "";
 		//try {
 		  //echo substr($event['message']['text'], -10);  // bcd
-		  $time = strtotime(substr($event['message']['text'], -10));
+		  $time = substr($event['message']['text'], -10);
 		  
 		//} catch (Exception $e) {
 		//  $time = "";
@@ -40,7 +37,7 @@ if (!is_null($events['events'])) {
 		
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text' && strpos($event['message']['text'], 'due') !== false ) {//&& (strpos($event['message']['text'], 'due') !== false)
 			// Get text sent
-			if(validateDate($time)){
+			if(!validateDate($time)){
 				
 			}else{
 			
@@ -52,7 +49,7 @@ if (!is_null($events['events'])) {
 			//$newformat = date('Y-m-d',$time);
 
 			//echo $newformat;
-            $duedate = urlencode(date('Y-m-d H:i:s', $time + (86400)));
+            $duedate = urlencode(date('Y-m-d H:i:s', strtotime($time) + (86400)));
             
 
 
