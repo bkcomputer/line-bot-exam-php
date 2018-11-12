@@ -9,8 +9,9 @@ require_once('vendor/linecorp/line-bot-sdk/line-bot-sdk-tiny/LINEBotTiny.php');
 
 try {
   $time = strtotime('p/16/2003');
+	echo $time;
 } catch (Exception $e) {
-  echo "Invalid date... {$e->getMessage()}";
+  echo "Invalid date...";
 }
 
 //$newformat = date('Y-m-d',$time);
