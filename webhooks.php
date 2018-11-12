@@ -14,6 +14,7 @@ try {
   echo "Invalid date...";
 }
 
+echo "test";
 //$newformat = date('Y-m-d',$time);
 
 //echo $newformat;
