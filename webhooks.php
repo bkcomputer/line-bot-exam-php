@@ -161,50 +161,50 @@ if (!is_null($events['events'])) {
 			$url .='&pos=top&due=' . $due;
 			$url .='&keepFromSource=all&key=de2dc6ea5b95210c5f7ab253415725f7&token=45abc962c53562b0610b6bcf1236ec645dfe9b1f01994469bd591393a1a23443';
 			
-			$data = [
-				'replyToken' => $replyToken,
-				'messages' => [$fullText],
-			];
+			// $data = [
+			// 	'replyToken' => $replyToken,
+			// 	'messages' => [$fullText],
+			// ];
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 			$ch = curl_init($url);
 			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
 			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-			curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+			//curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
 			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 			$result = curl_exec($ch);
 			curl_close($ch);
 			
 			
-			$respones = json_decode($result, true);
+			// $respones = json_decode($result, true);
 			
-			$messages = [
-				'type' => 'text',
-				'text' => $respones['shortUrl']//$content
-			];
+			// $messages = [
+			// 	'type' => 'text',
+			// 	'text' => $respones['shortUrl']//$content
+			// ];
 			
 			
 			
-			// Make a POST Request to Messaging API to reply to sender
-			$url = 'https://api.line.me/v2/bot/message/reply';
-			$data = [
-				'replyToken' => $replyToken,
-				'messages' => [$messages],
-			];
-			$post = json_encode($data);
-			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+			// // Make a POST Request to Messaging API to reply to sender
+			// $url = 'https://api.line.me/v2/bot/message/reply';
+			// $data = [
+			// 	'replyToken' => $replyToken,
+			// 	'messages' => [$messages],
+			// ];
+			// $post = json_encode($data);
+			// $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 
-			$ch = curl_init($url);
-			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-			curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
-			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-			$result = curl_exec($ch);
-			curl_close($ch);
+			// $ch = curl_init($url);
+			// curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+			// curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+			// curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+			// curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+			// curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+			// $result = curl_exec($ch);
+			// curl_close($ch);
 
-			echo $result . "\r\n";
+			// echo $result . "\r\n";
 			
 			} if (strpos($event['message']['text'], '@BANK DEV') !== false) {
 			     $board = "5be2658aa5b1b615863f6d45";
@@ -226,50 +226,50 @@ if (!is_null($events['events'])) {
 			$url .='&pos=top&due=' . $due;
 			$url .='&keepFromSource=all&key=de2dc6ea5b95210c5f7ab253415725f7&token=45abc962c53562b0610b6bcf1236ec645dfe9b1f01994469bd591393a1a23443';
 			
-			$data = [
-				'replyToken' => $replyToken,
-				'messages' => [$fullText],
-			];
-			$post = json_encode($data);
+			// $data = [
+			// 	'replyToken' => $replyToken,
+			// 	'messages' => [$fullText],
+			// ];
+			//$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 			$ch = curl_init($url);
 			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
 			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-			curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+			//curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
 			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 			$result = curl_exec($ch);
 			curl_close($ch);
 			
 			
-			$respones = json_decode($result, true);
+			// $respones = json_decode($result, true);
 			
-			$messages = [
-				'type' => 'text',
-				'text' => $respones['shortUrl']//$content
-			];
+			// $messages = [
+			// 	'type' => 'text',
+			// 	'text' => $respones['shortUrl']//$content
+			// ];
 			
 			
 			
-			// Make a POST Request to Messaging API to reply to sender
-			$url = 'https://api.line.me/v2/bot/message/reply';
-			$data = [
-				'replyToken' => $replyToken,
-				'messages' => [$messages],
-			];
-			$post = json_encode($data);
-			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+			// // Make a POST Request to Messaging API to reply to sender
+			// $url = 'https://api.line.me/v2/bot/message/reply';
+			// $data = [
+			// 	'replyToken' => $replyToken,
+			// 	'messages' => [$messages],
+			// ];
+			// $post = json_encode($data);
+			// $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 
-			$ch = curl_init($url);
-			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-			curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
-			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-			$result = curl_exec($ch);
-			curl_close($ch);
+			// $ch = curl_init($url);
+			// curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+			// curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+			// curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+			// curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+			// curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+			// $result = curl_exec($ch);
+			// curl_close($ch);
 
-			echo $result . "\r\n";
+			// echo $result . "\r\n";
 				
 			} if (strpos($event['message']['text'], '@Pure') !== false) {
 			    $board = "5be26448b284fe18ca0f60e4";
@@ -291,11 +291,11 @@ if (!is_null($events['events'])) {
 			$url .='&pos=top&due=' . $due;
 			$url .='&keepFromSource=all&key=de2dc6ea5b95210c5f7ab253415725f7&token=45abc962c53562b0610b6bcf1236ec645dfe9b1f01994469bd591393a1a23443';
 			
-			$data = [
-				'replyToken' => $replyToken,
-				'messages' => [$fullText],
-			];
-			$post = json_encode($data);
+			// $data = [
+			// 	'replyToken' => $replyToken,
+			// 	'messages' => [$fullText],
+			// ];
+			// $post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 			$ch = curl_init($url);
 			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
@@ -307,34 +307,34 @@ if (!is_null($events['events'])) {
 			curl_close($ch);
 			
 			
-			$respones = json_decode($result, true);
+			// $respones = json_decode($result, true);
 			
-			$messages = [
-				'type' => 'text',
-				'text' => $respones['shortUrl']//$content
-			];
+			// $messages = [
+			// 	'type' => 'text',
+			// 	'text' => $respones['shortUrl']//$content
+			// ];
 			
 			
 			
-			// Make a POST Request to Messaging API to reply to sender
-			$url = 'https://api.line.me/v2/bot/message/reply';
-			$data = [
-				'replyToken' => $replyToken,
-				'messages' => [$messages],
-			];
-			$post = json_encode($data);
-			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+			// // Make a POST Request to Messaging API to reply to sender
+			// $url = 'https://api.line.me/v2/bot/message/reply';
+			// $data = [
+			// 	'replyToken' => $replyToken,
+			// 	'messages' => [$messages],
+			// ];
+			// $post = json_encode($data);
+			// $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 
-			$ch = curl_init($url);
-			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-			curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
-			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-			$result = curl_exec($ch);
-			curl_close($ch);
+			// $ch = curl_init($url);
+			// curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+			// curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+			// curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+			// curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+			// curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+			// $result = curl_exec($ch);
+			// curl_close($ch);
 
-			echo $result . "\r\n";
+			// echo $result . "\r\n";
 				
             } 
             if (strpos($event['message']['text'], '@Ton') !== false) {
@@ -357,11 +357,11 @@ if (!is_null($events['events'])) {
 			$url .='&pos=top&due=' . $due;
 			$url .='&keepFromSource=all&key=de2dc6ea5b95210c5f7ab253415725f7&token=45abc962c53562b0610b6bcf1236ec645dfe9b1f01994469bd591393a1a23443';
 			
-			$data = [
-				'replyToken' => $replyToken,
-				'messages' => [$fullText],
-			];
-			$post = json_encode($data);
+			// $data = [
+			// 	'replyToken' => $replyToken,
+			// 	'messages' => [$fullText],
+			// ];
+			// $post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 			$ch = curl_init($url);
 			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
@@ -373,34 +373,34 @@ if (!is_null($events['events'])) {
 			curl_close($ch);
 			
 			
-			$respones = json_decode($result, true);
+			// $respones = json_decode($result, true);
 			
-			$messages = [
-				'type' => 'text',
-				'text' => $respones['shortUrl']//$content
-			];
+			// $messages = [
+			// 	'type' => 'text',
+			// 	'text' => $respones['shortUrl']//$content
+			// ];
 			
 			
 			
-			// Make a POST Request to Messaging API to reply to sender
-			$url = 'https://api.line.me/v2/bot/message/reply';
-			$data = [
-				'replyToken' => $replyToken,
-				'messages' => [$messages],
-			];
-			$post = json_encode($data);
-			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+			// // Make a POST Request to Messaging API to reply to sender
+			// $url = 'https://api.line.me/v2/bot/message/reply';
+			// $data = [
+			// 	'replyToken' => $replyToken,
+			// 	'messages' => [$messages],
+			// ];
+			// $post = json_encode($data);
+			// $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 
-			$ch = curl_init($url);
-			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-			curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
-			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-			$result = curl_exec($ch);
-			curl_close($ch);
+			// $ch = curl_init($url);
+			// curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+			// curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+			// curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+			// curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+			// curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+			// $result = curl_exec($ch);
+			// curl_close($ch);
 
-			echo $result . "\r\n";
+			// echo $result . "\r\n";
 				
             } 
             if (strpos($event['message']['text'], '@iSymphonyz') !== false) {
@@ -423,11 +423,11 @@ if (!is_null($events['events'])) {
 			$url .='&pos=top&due=' . $due;
 			$url .='&keepFromSource=all&key=de2dc6ea5b95210c5f7ab253415725f7&token=45abc962c53562b0610b6bcf1236ec645dfe9b1f01994469bd591393a1a23443';
 			
-			$data = [
-				'replyToken' => $replyToken,
-				'messages' => [$fullText],
-			];
-			$post = json_encode($data);
+			// $data = [
+			// 	'replyToken' => $replyToken,
+			// 	'messages' => [$fullText],
+			// ];
+			// $post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 			$ch = curl_init($url);
 			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
@@ -439,34 +439,34 @@ if (!is_null($events['events'])) {
 			curl_close($ch);
 			
 			
-			$respones = json_decode($result, true);
+			// $respones = json_decode($result, true);
 			
-			$messages = [
-				'type' => 'text',
-				'text' => $respones['shortUrl']//$content
-			];
+			// $messages = [
+			// 	'type' => 'text',
+			// 	'text' => $respones['shortUrl']//$content
+			// ];
 			
 			
 			
-			// Make a POST Request to Messaging API to reply to sender
-			$url = 'https://api.line.me/v2/bot/message/reply';
-			$data = [
-				'replyToken' => $replyToken,
-				'messages' => [$messages],
-			];
-			$post = json_encode($data);
-			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+			// // Make a POST Request to Messaging API to reply to sender
+			// $url = 'https://api.line.me/v2/bot/message/reply';
+			// $data = [
+			// 	'replyToken' => $replyToken,
+			// 	'messages' => [$messages],
+			// ];
+			// $post = json_encode($data);
+			// $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 
-			$ch = curl_init($url);
-			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-			curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
-			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-			$result = curl_exec($ch);
-			curl_close($ch);
+			// $ch = curl_init($url);
+			// curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+			// curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+			// curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+			// curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+			// curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+			// $result = curl_exec($ch);
+			// curl_close($ch);
 
-			echo $result . "\r\n";
+			// echo $result . "\r\n";
 				
             } 
             if (strpos($event['message']['text'], '@เสี่ยหมี') !== false) {
@@ -490,11 +490,11 @@ if (!is_null($events['events'])) {
 			$url .='&pos=top&due=' . $due;
 			$url .='&keepFromSource=all&key=de2dc6ea5b95210c5f7ab253415725f7&token=45abc962c53562b0610b6bcf1236ec645dfe9b1f01994469bd591393a1a23443';
 			
-			$data = [
-				'replyToken' => $replyToken,
-				'messages' => [$fullText],
-			];
-			$post = json_encode($data);
+			// $data = [
+			// 	'replyToken' => $replyToken,
+			// 	'messages' => [$fullText],
+			// ];
+			// $post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 			$ch = curl_init($url);
 			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
@@ -506,34 +506,34 @@ if (!is_null($events['events'])) {
 			curl_close($ch);
 			
 			
-			$respones = json_decode($result, true);
+			// $respones = json_decode($result, true);
 			
-			$messages = [
-				'type' => 'text',
-				'text' => $respones['shortUrl']//$content
-			];
+			// $messages = [
+			// 	'type' => 'text',
+			// 	'text' => $respones['shortUrl']//$content
+			// ];
 			
 			
 			
-			// Make a POST Request to Messaging API to reply to sender
-			$url = 'https://api.line.me/v2/bot/message/reply';
-			$data = [
-				'replyToken' => $replyToken,
-				'messages' => [$messages],
-			];
-			$post = json_encode($data);
-			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+			// // Make a POST Request to Messaging API to reply to sender
+			// $url = 'https://api.line.me/v2/bot/message/reply';
+			// $data = [
+			// 	'replyToken' => $replyToken,
+			// 	'messages' => [$messages],
+			// ];
+			// $post = json_encode($data);
+			// $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 
-			$ch = curl_init($url);
-			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-			curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
-			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-			$result = curl_exec($ch);
-			curl_close($ch);
+			// $ch = curl_init($url);
+			// curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+			// curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+			// curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+			// curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+			// curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+			// $result = curl_exec($ch);
+			// curl_close($ch);
 
-			echo $result . "\r\n";
+			// echo $result . "\r\n";
 				
             } 
             if (strpos($event['message']['text'], '@KinG`Genesis') !== false) {
@@ -556,11 +556,11 @@ if (!is_null($events['events'])) {
 			$url .='&pos=top&due=' . $due;
 			$url .='&keepFromSource=all&key=de2dc6ea5b95210c5f7ab253415725f7&token=45abc962c53562b0610b6bcf1236ec645dfe9b1f01994469bd591393a1a23443';
 			
-			$data = [
-				'replyToken' => $replyToken,
-				'messages' => [$fullText],
-			];
-			$post = json_encode($data);
+			// $data = [
+			// 	'replyToken' => $replyToken,
+			// 	'messages' => [$fullText],
+			// ];
+			// $post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 			$ch = curl_init($url);
 			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
@@ -572,34 +572,34 @@ if (!is_null($events['events'])) {
 			curl_close($ch);
 			
 			
-			$respones = json_decode($result, true);
+			// $respones = json_decode($result, true);
 			
-			$messages = [
-				'type' => 'text',
-				'text' => $respones['shortUrl']//$content
-			];
+			// $messages = [
+			// 	'type' => 'text',
+			// 	'text' => $respones['shortUrl']//$content
+			// ];
 			
 			
 			
-			// Make a POST Request to Messaging API to reply to sender
-			$url = 'https://api.line.me/v2/bot/message/reply';
-			$data = [
-				'replyToken' => $replyToken,
-				'messages' => [$messages],
-			];
-			$post = json_encode($data);
-			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+			// // Make a POST Request to Messaging API to reply to sender
+			// $url = 'https://api.line.me/v2/bot/message/reply';
+			// $data = [
+			// 	'replyToken' => $replyToken,
+			// 	'messages' => [$messages],
+			// ];
+			// $post = json_encode($data);
+			// $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 
-			$ch = curl_init($url);
-			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-			curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
-			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-			$result = curl_exec($ch);
-			curl_close($ch);
+			// $ch = curl_init($url);
+			// curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+			// curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+			// curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+			// curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+			// curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+			// $result = curl_exec($ch);
+			// curl_close($ch);
 
-			echo $result . "\r\n";
+			// echo $result . "\r\n";
 				
 			}
 
