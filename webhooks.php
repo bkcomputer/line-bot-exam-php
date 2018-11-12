@@ -60,8 +60,8 @@ if (!is_null($events['events'])) {
 			
 			$url .='&idList=';
 			$url .=$board;
-			$due = date('y:m:d', time() + (86400));
-			$url .='&pos=top&due=' . $due;
+			//$due = date('y:m:d', time() + (86400));
+			//$url .='&pos=top&due=' . $due;
 			$url .='&keepFromSource=all&key=de2dc6ea5b95210c5f7ab253415725f7&token=45abc962c53562b0610b6bcf1236ec645dfe9b1f01994469bd591393a1a23443';
 			
 			$data = [
@@ -69,31 +69,31 @@ if (!is_null($events['events'])) {
 				'messages' => [$fullText],
 			];
 			$post = json_encode($data);
-// 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
-// 			$ch = curl_init($url);
-// 			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-// 			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-// 			curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
-// 			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-// 			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-// 			$result = curl_exec($ch);
-// 			curl_close($ch);
+			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+			$ch = curl_init($url);
+			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+			curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+			$result = curl_exec($ch);
+			curl_close($ch);
 			
 			
-// 			$respones = json_decode($result, true);
+			$respones = json_decode($result, true);
 			
-// 			$messages = [
-// 				'type' => 'text',
-// 				'text' => $respones['shortUrl']//$content
-// 			];
+			$messages = [
+				'type' => 'text',
+				'text' => $respones['shortUrl']//$content
+			];
 			
 			
-			$url2 = $url;
+			
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
 				'replyToken' => $replyToken,
-				'messages' => $url2,//[$messages],
+				'messages' => [$messages],
 			];
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
