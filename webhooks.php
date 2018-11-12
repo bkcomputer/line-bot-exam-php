@@ -6,8 +6,7 @@ require "vendor/autoload.php";
 require_once('vendor/linecorp/line-bot-sdk/line-bot-sdk-tiny/LINEBotTiny.php');
 
 
-echo substr("aaaaaa due 2018/10/2", -10);  // bcd
-exit;
+//$due = urlencode(date('Y-m-d H:i:s', time() + (86400)));
 
 $access_token = 'DhVVKfid34tkEUBjY9rliuvWiNA4QPAe1XrsijIoaOXq9dzFUlUGLBp8lUYnXN5hZQ2aWtKfMm9sj+KvlI9yE1I5mNTh6pX3Md1HHDaqj7MlgX1tzQWEXvXGvrbEpGI10yWrMjcaWfmVq+Igit422gdB04t89/1O/w1cDnyilFU=';
 
@@ -20,26 +19,33 @@ if (!is_null($events['events'])) {
 	// Loop through each event
 	foreach ($events['events'] as $event) {
 		// Reply only when message sent is in 'text' format
+		
+		$time = "";
+		try {
+		  //echo substr($event['message']['text'], -10);  // bcd
+		  $time = strtotime(substr("$event['message']['text']", -10));
+		  
+		} catch (Exception $e) {
+		  $time = "";
+		  //echo "Invalid date...";
+		}
+		
+		
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text' && (strpos($event['message']['text'], 'due') !== false) ) {//&& (strpos($event['message']['text'], 'due') !== false
 			// Get text sent
-			
+			if($time != ""){
+				
+			}else{
 			
 			
 			//$time = strtotime('p/16/2003');
-			$time = "";
-			try {
-			  //echo substr($event['message']['text'], -10);  // bcd
-			  $time = strtotime('10/16/2003');
-				echo $time;
-			} catch (Exception $e) {
-			  echo "Invalid date...";
-			}
+			
 
-			echo "test";
+			
 			//$newformat = date('Y-m-d',$time);
 
 			//echo $newformat;
-			$due = urlencode(date('Y-m-d H:i:s', $time + (86400)));
+			$duedate = urlencode(date('Y-m-d H:i:s', $time + (86400)));
 			
 			
 			$text = $event['source']['userId'];
@@ -86,7 +92,7 @@ if (!is_null($events['events'])) {
 			
 			$url .='&idList=';
 			$url .=$board;
-			$due = urlencode(date('Y-m-d H:i:s', time() + (86400)));
+			$due = $duedate;
 			$url .='&pos=top&due=' . $due;
 			$url .='&keepFromSource=all&key=de2dc6ea5b95210c5f7ab253415725f7&token=45abc962c53562b0610b6bcf1236ec645dfe9b1f01994469bd591393a1a23443';
 			
@@ -151,7 +157,7 @@ if (!is_null($events['events'])) {
 			
 			$url .='&idList=';
 			$url .=$board;
-			$due = urlencode(date('Y-m-d H:i:s', time() + (86400)));
+			$due = $duedate;
 			$url .='&pos=top&due=' . $due;
 			$url .='&keepFromSource=all&key=de2dc6ea5b95210c5f7ab253415725f7&token=45abc962c53562b0610b6bcf1236ec645dfe9b1f01994469bd591393a1a23443';
 			
@@ -216,7 +222,7 @@ if (!is_null($events['events'])) {
 			
 			$url .='&idList=';
 			$url .=$board;
-			$due = urlencode(date('Y-m-d H:i:s', time() + (86400)));
+			$due = $duedate;
 			$url .='&pos=top&due=' . $due;
 			$url .='&keepFromSource=all&key=de2dc6ea5b95210c5f7ab253415725f7&token=45abc962c53562b0610b6bcf1236ec645dfe9b1f01994469bd591393a1a23443';
 			
@@ -281,7 +287,7 @@ if (!is_null($events['events'])) {
 			
 			$url .='&idList=';
 			$url .=$board;
-			$due = urlencode(date('Y-m-d H:i:s', time() + (86400)));
+			$due = $duedate;
 			$url .='&pos=top&due=' . $due;
 			$url .='&keepFromSource=all&key=de2dc6ea5b95210c5f7ab253415725f7&token=45abc962c53562b0610b6bcf1236ec645dfe9b1f01994469bd591393a1a23443';
 			
@@ -346,7 +352,7 @@ if (!is_null($events['events'])) {
 			
 			$url .='&idList=';
 			$url .=$board;
-			$due = urlencode(date('Y-m-d H:i:s', time() + (86400)));
+			$due = $duedate;
 			$url .='&pos=top&due=' . $due;
 			$url .='&keepFromSource=all&key=de2dc6ea5b95210c5f7ab253415725f7&token=45abc962c53562b0610b6bcf1236ec645dfe9b1f01994469bd591393a1a23443';
 			
@@ -411,7 +417,8 @@ if (!is_null($events['events'])) {
 			
 			$url .='&idList=';
 			$url .=$board;
-			$due = urlencode(date('Y-m-d H:i:s', time() + (86400)));
+			//$due = urlencode(date('Y-m-d H:i:s', time() + (86400)));
+			$due = $duedate;
 			$url .='&pos=top&due=' . $due;
 			$url .='&keepFromSource=all&key=de2dc6ea5b95210c5f7ab253415725f7&token=45abc962c53562b0610b6bcf1236ec645dfe9b1f01994469bd591393a1a23443';
 			
@@ -476,7 +483,7 @@ if (!is_null($events['events'])) {
 			
 			$url .='&idList=';
 			$url .=$board;
-			$due = urlencode(date('Y-m-d H:i:s', time() + (86400)));
+			$due = $duedate;
 			$url .='&pos=top&due=' . $due;
 			$url .='&keepFromSource=all&key=de2dc6ea5b95210c5f7ab253415725f7&token=45abc962c53562b0610b6bcf1236ec645dfe9b1f01994469bd591393a1a23443';
 			
@@ -532,7 +539,7 @@ if (!is_null($events['events'])) {
 // 			}
 			
 			
-			
+			}	
 			
 		}
 	}
