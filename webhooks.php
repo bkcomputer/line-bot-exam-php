@@ -77,7 +77,7 @@ if (!is_null($events['events'])) {
 			//$newformat = date('Y-m-d',$time);
 
 			//echo $newformat;
-                        $duedate = urlencode(date('Y-m-d H:i:s', strtotime($time) + (86400)));
+                        $duedate = urlencode(date('Y-m-d H:i:s', strtotime($time) + (0)));//86400
             
 
 
