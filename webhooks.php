@@ -5,22 +5,10 @@
 require "vendor/autoload.php";
 require_once('vendor/linecorp/line-bot-sdk/line-bot-sdk-tiny/LINEBotTiny.php');
 
-//$time = strtotime('p/16/2003');
-$time = "";
-try {
-  $time = strtotime('10/16/2003');
-	echo $time;
-} catch (Exception $e) {
-  echo "Invalid date...";
-}
 
-echo "test";
-//$newformat = date('Y-m-d',$time);
-
-//echo $newformat;
-$due = urlencode(date('Y-m-d H:i:s', $time + (86400)));
-
+echo substr("aaaaaa due 01/02/2018", -10);  // bcd
 exit;
+
 $access_token = 'DhVVKfid34tkEUBjY9rliuvWiNA4QPAe1XrsijIoaOXq9dzFUlUGLBp8lUYnXN5hZQ2aWtKfMm9sj+KvlI9yE1I5mNTh6pX3Md1HHDaqj7MlgX1tzQWEXvXGvrbEpGI10yWrMjcaWfmVq+Igit422gdB04t89/1O/w1cDnyilFU=';
 
 // Get POST body content
@@ -34,6 +22,26 @@ if (!is_null($events['events'])) {
 		// Reply only when message sent is in 'text' format
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text' && (strpos($event['message']['text'], 'due') !== false) ) {//&& (strpos($event['message']['text'], 'due') !== false
 			// Get text sent
+			
+			
+			
+			//$time = strtotime('p/16/2003');
+			$time = "";
+			try {
+			  //echo substr($event['message']['text'], -10);  // bcd
+			  $time = strtotime('10/16/2003');
+				echo $time;
+			} catch (Exception $e) {
+			  echo "Invalid date...";
+			}
+
+			echo "test";
+			//$newformat = date('Y-m-d',$time);
+
+			//echo $newformat;
+			$due = urlencode(date('Y-m-d H:i:s', $time + (86400)));
+			
+			
 			$text = $event['source']['userId'];
 			// Get replyToken
 			$replyToken = $event['replyToken'];
