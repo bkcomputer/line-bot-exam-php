@@ -6,7 +6,7 @@ require "vendor/autoload.php";
 require_once('vendor/linecorp/line-bot-sdk/line-bot-sdk-tiny/LINEBotTiny.php');
 
 //$time = strtotime('p/16/2003');
-
+$time = "";
 try {
   $time = strtotime('10/16/2003');
 	echo $time;
@@ -32,7 +32,7 @@ if (!is_null($events['events'])) {
 	// Loop through each event
 	foreach ($events['events'] as $event) {
 		// Reply only when message sent is in 'text' format
-		if ($event['type'] == 'message' && $event['message']['type'] == 'text'  ) {//&& (strpos($event['message']['text'], 'due') !== false
+		if ($event['type'] == 'message' && $event['message']['type'] == 'text' && (strpos($event['message']['text'], 'due') !== false) ) {//&& (strpos($event['message']['text'], 'due') !== false
 			// Get text sent
 			$text = $event['source']['userId'];
 			// Get replyToken
