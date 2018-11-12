@@ -5,6 +5,13 @@
 require "vendor/autoload.php";
 require_once('vendor/linecorp/line-bot-sdk/line-bot-sdk-tiny/LINEBotTiny.php');
 
+function validateDate($date, $format = 'Y-m-d')
+{
+    $d = DateTime::createFromFormat($format, $date);
+    // The Y ( 4 digits year ) returns TRUE for any integer with any number of digits so changing the comparison from == to === fixes the issue.
+    return $d && $d->format($format) === $date;
+}
+
 
 //$due = urlencode(date('Y-m-d H:i:s', time() + (86400)));
 
@@ -20,20 +27,20 @@ if (!is_null($events['events'])) {
 	foreach ($events['events'] as $event) {
 		// Reply only when message sent is in 'text' format
 		
-		$time = "";
-		try {
+		//$time = "";
+		//try {
 		  //echo substr($event['message']['text'], -10);  // bcd
 		  $time = strtotime(substr($event['message']['text'], -10));
 		  
-		} catch (Exception $e) {
-		  $time = "";
+		//} catch (Exception $e) {
+		//  $time = "";
 		  //echo "Invalid date...";
-		}
+		//}
 		
 		
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text' && strpos($event['message']['text'], 'due') !== false ) {//&& (strpos($event['message']['text'], 'due') !== false)
 			// Get text sent
-			if($time != ""){
+			if(validateDate($time)){
 				
 			}else{
 			
