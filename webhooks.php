@@ -33,9 +33,9 @@ if (!is_null($events['events'])) {
 		
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text' && strpos($event['message']['text'], 'due') !== false ) {//&& (strpos($event['message']['text'], 'due') !== false)
 			// Get text sent
-			//if($time != ""){
+			if($time != ""){
 				
-			//}else{
+			}else{
 			
 			
 			//$time = strtotime('p/16/2003');
@@ -572,13 +572,10 @@ if (!is_null($events['events'])) {
 			echo $result . "\r\n";
 				
 			}
-// 			}else{
-// 			    $board = "5be2658aa5b1b615863f6d45";
-			
-// 			}
+
 			
 			
-			//}	
+			}	
 			
 		}
 	}
