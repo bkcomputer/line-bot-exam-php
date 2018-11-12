@@ -44,9 +44,14 @@ if (!is_null($events['events'])) {
 			if(!checkIsAValidDate($time)){
 				
 				$url = 'https://api.line.me/v2/bot/message/reply';
+				
+				$messages = [
+				'type' => 'text',
+				'text' => 'due date incorrect.!'//$content
+			];
 			$data = [
 				'replyToken' => $replyToken,
-				'messages' => ["due date incorrect."],
+				'messages' => [$messages],
 			];
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
