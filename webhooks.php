@@ -60,6 +60,8 @@ if (!is_null($events['events'])) {
 			
 			$url .='&idList=';
 			$url .=$board;
+			$due= Date('y/m/d', strtotime("+1 days"));
+			$url .='&pos=top&due=' . $due;
 			$url .='&keepFromSource=all&key=de2dc6ea5b95210c5f7ab253415725f7&token=45abc962c53562b0610b6bcf1236ec645dfe9b1f01994469bd591393a1a23443';
 			
 			$data = [
@@ -123,6 +125,8 @@ if (!is_null($events['events'])) {
 			
 			$url .='&idList=';
 			$url .=$board;
+			$due= Date('y/m/d', strtotime("+1 days"));
+			$url .='&pos=top&due=' . $due;
 			$url .='&keepFromSource=all&key=de2dc6ea5b95210c5f7ab253415725f7&token=45abc962c53562b0610b6bcf1236ec645dfe9b1f01994469bd591393a1a23443';
 			
 			$data = [
@@ -186,6 +190,8 @@ if (!is_null($events['events'])) {
 			
 			$url .='&idList=';
 			$url .=$board;
+			$due= Date('y/m/d', strtotime("+1 days"));
+			$url .='&pos=top&due=' . $due;
 			$url .='&keepFromSource=all&key=de2dc6ea5b95210c5f7ab253415725f7&token=45abc962c53562b0610b6bcf1236ec645dfe9b1f01994469bd591393a1a23443';
 			
 			$data = [
@@ -249,6 +255,8 @@ if (!is_null($events['events'])) {
 			
 			$url .='&idList=';
 			$url .=$board;
+			$due= Date('y/m/d', strtotime("+1 days"));
+			$url .='&pos=top&due=' . $due;
 			$url .='&keepFromSource=all&key=de2dc6ea5b95210c5f7ab253415725f7&token=45abc962c53562b0610b6bcf1236ec645dfe9b1f01994469bd591393a1a23443';
 			
 			$data = [
@@ -312,6 +320,8 @@ if (!is_null($events['events'])) {
 			
 			$url .='&idList=';
 			$url .=$board;
+			$due= Date('y/m/d', strtotime("+1 days"));
+			$url .='&pos=top&due=' . $due;
 			$url .='&keepFromSource=all&key=de2dc6ea5b95210c5f7ab253415725f7&token=45abc962c53562b0610b6bcf1236ec645dfe9b1f01994469bd591393a1a23443';
 			
 			$data = [
@@ -375,6 +385,8 @@ if (!is_null($events['events'])) {
 			
 			$url .='&idList=';
 			$url .=$board;
+			$due= Date('y/m/d', strtotime("+1 days"));
+			$url .='&pos=top&due=' . $due;
 			$url .='&keepFromSource=all&key=de2dc6ea5b95210c5f7ab253415725f7&token=45abc962c53562b0610b6bcf1236ec645dfe9b1f01994469bd591393a1a23443';
 			
 			$data = [
@@ -438,6 +450,8 @@ if (!is_null($events['events'])) {
 			
 			$url .='&idList=';
 			$url .=$board;
+			$due= Date('y/m/d', strtotime("+1 days"));
+			$url .='&pos=top&due=' . $due;
 			$url .='&keepFromSource=all&key=de2dc6ea5b95210c5f7ab253415725f7&token=45abc962c53562b0610b6bcf1236ec645dfe9b1f01994469bd591393a1a23443';
 			
 			$data = [
