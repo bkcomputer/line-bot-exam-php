@@ -23,7 +23,7 @@ if (!is_null($events['events'])) {
 		$time = "";
 		try {
 		  //echo substr($event['message']['text'], -10);  // bcd
-		   $time = strtotime(substr($event['message']['text'], -10));
+		  $time = strtotime(substr($event['message']['text'], -10));
 		  
 		} catch (Exception $e) {
 		  $time = "";
@@ -45,12 +45,59 @@ if (!is_null($events['events'])) {
 			//$newformat = date('Y-m-d',$time);
 
 			//echo $newformat;
-			$duedate = urlencode(date('Y-m-d H:i:s', $time + (86400)));
+            $duedate = urlencode(date('Y-m-d H:i:s', $time + (86400)));
+            
+
+
+
+
+
+            
 			
 			
 			$text = $event['source']['userId'];
 			// Get replyToken
-			$replyToken = $event['replyToken'];
+            $replyToken = $event['replyToken'];
+            
+
+
+
+            //replyToken
+
+
+            $messages = [
+				'type' => 'text',
+				'text' => $respones['shortUrl']//$content
+			];
+			
+			
+			
+			// Make a POST Request to Messaging API to reply to sender
+			$url = 'https://api.line.me/v2/bot/message/reply';
+			$data = [
+				'replyToken' => $replyToken,
+				'messages' => [$duedate],
+			];
+			$post = json_encode($data);
+			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+
+			$ch = curl_init($url);
+			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+			curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+			$result = curl_exec($ch);
+			curl_close($ch);
+
+
+
+
+
+
+
+
+
 
 			// Build message to reply back
 			
@@ -68,7 +115,18 @@ if (!is_null($events['events'])) {
 
 			$head = urlencode($fullText)."-".date('m/d/Y');
 			
-			
+            
+            
+
+
+
+
+
+
+
+
+
+
 			//5be2658aa5b1b615863f6d45 PM @Monster_P @BANK DEV
 			//5be26448b284fe18ca0f60e4 Design @Pure
 			//5be26421e7ef14154e8e1719 IOS @Ton
@@ -271,7 +329,8 @@ if (!is_null($events['events'])) {
 
 			echo $result . "\r\n";
 				
-			} if (strpos($event['message']['text'], '@Ton') !== false) {
+            } 
+            if (strpos($event['message']['text'], '@Ton') !== false) {
 			    $board = "5be26421e7ef14154e8e1719";
 				
 				$url = 'https://api.trello.com/1/cards?name=';
@@ -336,7 +395,8 @@ if (!is_null($events['events'])) {
 
 			echo $result . "\r\n";
 				
-			} if (strpos($event['message']['text'], '@iSymphonyz') !== false) {
+            } 
+            if (strpos($event['message']['text'], '@iSymphonyz') !== false) {
 			    $board = "5be2642571a7725bc73d523b";
 				
 				$url = 'https://api.trello.com/1/cards?name=';
@@ -401,7 +461,8 @@ if (!is_null($events['events'])) {
 
 			echo $result . "\r\n";
 				
-			} if (strpos($event['message']['text'], '@เสี่ยหมี') !== false) {
+            } 
+            if (strpos($event['message']['text'], '@เสี่ยหมี') !== false) {
 			    $board = "5be264422464ad09fa4116bf";
 				
 				$url = 'https://api.trello.com/1/cards?name=';
@@ -467,7 +528,8 @@ if (!is_null($events['events'])) {
 
 			echo $result . "\r\n";
 				
-			} if (strpos($event['message']['text'], '@KinG`Genesis') !== false) {
+            } 
+            if (strpos($event['message']['text'], '@KinG`Genesis') !== false) {
 			    $board = "5be264422464ad09fa4116bf";
 				
 				$url = 'https://api.trello.com/1/cards?name=';
