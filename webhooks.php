@@ -5,10 +5,10 @@
 require "vendor/autoload.php";
 require_once('vendor/linecorp/line-bot-sdk/line-bot-sdk-tiny/LINEBotTiny.php');
 
-$time = strtotime('p/16/2003');
+//$time = strtotime('p/16/2003');
 
 try {
-  $time = strtotime('10/16/2003');
+  $time = strtotime('p/16/2003');
 } catch(Exception $e) {
   echo "Invalid date... {$e->getMessage()}";
 }
