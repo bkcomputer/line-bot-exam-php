@@ -31,11 +31,11 @@ if (!is_null($events['events'])) {
 		}
 		
 		
-		if ($event['type'] == 'message' && $event['message']['type'] == 'text' && (strpos($event['message']['text'], 'due') !== false) ) {//&& (strpos($event['message']['text'], 'due') !== false
+		if ($event['type'] == 'message' && $event['message']['type'] == 'text'  ) {//&& (strpos($event['message']['text'], 'due') !== false)
 			// Get text sent
-			if($time != ""){
+			//if($time != ""){
 				
-			}else{
+			//}else{
 			
 			
 			//$time = strtotime('p/16/2003');
@@ -601,7 +601,7 @@ if (!is_null($events['events'])) {
 // 			}
 			
 			
-			}	
+			//}	
 			
 		}
 	}
