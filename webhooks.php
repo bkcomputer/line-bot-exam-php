@@ -23,7 +23,7 @@ if (!is_null($events['events'])) {
 		$time = "";
 		try {
 		  //echo substr($event['message']['text'], -10);  // bcd
-		  $time = strtotime(substr("$event['message']['text']", -10));
+		   $time = strtotime(substr($event['message']['text'], -10));
 		  
 		} catch (Exception $e) {
 		  $time = "";
