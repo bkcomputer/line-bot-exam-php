@@ -118,7 +118,7 @@ if (!is_null($events['events'])) {
 			$fullText = str_replace( '@iSymphonyz', '', $fullText);
 			$fullText = str_replace( '@เสี่ยหมี', '', $fullText);
 			$fullText = str_replace( '@KinG`Genesis', '', $fullText);
-			$fullText = str_replace( 'due', '-DueDate-', $fullText);
+			//$fullText = str_replace( 'due', '-DueDate-', $fullText);
 				
 			
 
