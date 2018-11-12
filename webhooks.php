@@ -1,6 +1,6 @@
 <?php // callback.php
 
-$due = urlencode(date('y-m-d', time() + (86400)));
+$due = urlencode(date('YY-MM-DD', time() + (86400)));
 echo $due;
 exit();
 require "vendor/autoload.php";
