@@ -5,15 +5,20 @@
 require "vendor/autoload.php";
 require_once('vendor/linecorp/line-bot-sdk/line-bot-sdk-tiny/LINEBotTiny.php');
 
-$time = strtotime('10/16/2003');
+$time = strtotime('p/16/2003');
+
+try {
+  $time = strtotime('10/16/2003');
+} catch(Exception $e) {
+  echo "Invalid date... {$e->getMessage()}";
+}
 
 //$newformat = date('Y-m-d',$time);
 
 //echo $newformat;
 $due = urlencode(date('Y-m-d H:i:s', $time + (86400)));
-echo $due;
-exit;
 
+exit;
 $access_token = 'DhVVKfid34tkEUBjY9rliuvWiNA4QPAe1XrsijIoaOXq9dzFUlUGLBp8lUYnXN5hZQ2aWtKfMm9sj+KvlI9yE1I5mNTh6pX3Md1HHDaqj7MlgX1tzQWEXvXGvrbEpGI10yWrMjcaWfmVq+Igit422gdB04t89/1O/w1cDnyilFU=';
 
 // Get POST body content
@@ -25,7 +30,7 @@ if (!is_null($events['events'])) {
 	// Loop through each event
 	foreach ($events['events'] as $event) {
 		// Reply only when message sent is in 'text' format
-		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
+		if ($event['type'] == 'message' && $event['message']['type'] == 'text' && (strpos($event['message']['text'], 'due') !== false ) {
 			// Get text sent
 			$text = $event['source']['userId'];
 			// Get replyToken
