@@ -1,6 +1,6 @@
 <?php // callback.php
 
-
+//Ue5012e668f8c66f02959ac9c23cc3d4b
 
 require "vendor/autoload.php";
 require_once('vendor/linecorp/line-bot-sdk/line-bot-sdk-tiny/LINEBotTiny.php');
@@ -35,7 +35,7 @@ if (!is_null($events['events'])) {
 		//}
 		
 		
-		if ($event['type'] == 'message' && $event['message']['type'] == 'text' && strpos($event['message']['text'], 'due') !== false ) {//&& (strpos($event['message']['text'], 'due') !== false)
+		if (($event['source']['userId'] == "Ue5012e668f8c66f02959ac9c23cc3d4b" || $event['source']['userId'] == "Ue5012e668f8c66f02959ac9c23cc3d4b" )&& $event['type'] == 'message' && $event['message']['type'] == 'text' && strpos($event['message']['text'], 'due') !== false ) {//&& (strpos($event['message']['text'], 'due') !== false)
 			// Get text sent
 			$text = $event['source']['userId'];
 			// Get replyToken
