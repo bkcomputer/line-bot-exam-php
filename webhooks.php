@@ -44,10 +44,10 @@ if (!is_null($events['events'])) {
 			if(!checkIsAValidDate($time)){
 				
 				$url = 'https://api.line.me/v2/bot/message/reply';
-				
+				$arr_text = array("บรีฟวันนี้ เอาวันนี้ ..... ใครจะทำทันจ๊ะ!!!!!!","กำหนดวันให้ชัดเจนหน่อยจ้า","รีบแบบนี้ บรีฟตั้งแต่เมื่อวานสิจ๊ะ","บรีฟด่วน บรีฟเร่ง ขอให้บอก");
 				$messages = [
 				'type' => 'text',
-				'text' => 'บรีฟวันนี้ เอาวันนี้ ..... พ่องงงง!!!!!!'//$content
+				'text' => $arr_text[mt_rand(0,3)]
 			];
 			$data = [
 				'replyToken' => $replyToken,
