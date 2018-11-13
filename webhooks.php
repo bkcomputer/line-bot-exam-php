@@ -47,7 +47,7 @@ if (!is_null($events['events'])) {
 				
 				$messages = [
 				'type' => 'text',
-				'text' => 'due date incorrect.!'//$content
+				'text' => 'บรีฟวันนี้ เอาวันนี้ ..... พ่องงงง!!!!!!'//$content
 			];
 			$data = [
 				'replyToken' => $replyToken,
