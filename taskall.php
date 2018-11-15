@@ -32,9 +32,10 @@ $url = "https://api.trello.com/1/lists/5be2658aa5b1b615863f6d45/cards?key=de2dc6
 //echo "<pre>";
 //print_r(json_decode($result));
 $dataall = json_decode($result);
-echo "PM (โปเต้)<br>";
+//echo "PM (โปเต้)<br>";
 echo "<table border='1'>";
 echo "<tr>";
+echo "<td>resource</td>";
 echo "<td>name</td>";
 echo "<td>desc</td>";
 echo "<td width='150'>due</td>";
@@ -43,6 +44,7 @@ echo "<td>shortUrl</td>";
 echo "</tr>";
 foreach($dataall as $key => $value){
 	//print_r($value);
+	echo "<td>PM (โปเต้)</td>";
 	if($value->dueComplete == 'true'){
 		echo "<tr bgcolor='#33FF64'>";
 	}else{
@@ -93,9 +95,10 @@ $url = "https://api.trello.com/1/lists/5be26448b284fe18ca0f60e4/cards?key=de2dc6
 //echo "<pre>";
 //print_r(json_decode($result));
 $dataall = json_decode($result);
-echo "Designer (เพี้ยว)<br>";
+//echo "Designer (เพี้ยว)<br>";
 echo "<table border='1'>";
 echo "<tr>";
+echo "<td>resource</td>";
 echo "<td>name</td>";
 echo "<td>desc</td>";
 echo "<td width='150'>due</td>";
@@ -104,6 +107,7 @@ echo "<td>shortUrl</td>";
 echo "</tr>";
 foreach($dataall as $key => $value){
 	//print_r($value);
+	echo "<td>Designer (เพี้ยว)</td>";
 	if($value->dueComplete == 'true'){
 		echo "<tr bgcolor='#33FF64'>";
 	}else{
@@ -158,9 +162,10 @@ $url = "https://api.trello.com/1/lists/5be26421e7ef14154e8e1719/cards?key=de2dc6
 //echo "<pre>";
 //print_r(json_decode($result));
 $dataall = json_decode($result);
-echo "IOS (ต้น)<br>";
+//echo "IOS (ต้น)<br>";
 echo "<table border='1'>";
 echo "<tr>";
+echo "<td>resource</td>";
 echo "<td>name</td>";
 echo "<td>desc</td>";
 echo "<td width='150'>due</td>";
@@ -169,6 +174,7 @@ echo "<td>shortUrl</td>";
 echo "</tr>";
 foreach($dataall as $key => $value){
 	//print_r($value);
+	echo "<td>IOS (ต้น)</td>";
 	if($value->dueComplete == 'true'){
 		echo "<tr bgcolor='#33FF64'>";
 	}else{
@@ -218,9 +224,10 @@ $url = "https://api.trello.com/1/lists/5be2642571a7725bc73d523b/cards?key=de2dc6
 //echo "<pre>";
 //print_r(json_decode($result));
 $dataall = json_decode($result);
-echo "android (เก่ง)<br>";
+//echo "android (เก่ง)<br>";
 echo "<table border='1'>";
 echo "<tr>";
+echo "<td>resource</td>";
 echo "<td>name</td>";
 echo "<td>desc</td>";
 echo "<td width='150'>due</td>";
@@ -229,6 +236,7 @@ echo "<td>shortUrl</td>";
 echo "</tr>";
 foreach($dataall as $key => $value){
 	//print_r($value);
+	echo "<td>android (เก่ง)</td>";
 	if($value->dueComplete == 'true'){
 		echo "<tr bgcolor='#33FF64'>";
 	}else{
@@ -279,9 +287,10 @@ $url = "https://api.trello.com/1/lists/5be264422464ad09fa4116bf/cards?key=de2dc6
 //echo "<pre>";
 //print_r(json_decode($result));
 $dataall = json_decode($result);
-echo "CMS (คิง)<br>";
+//echo "CMS (คิง)<br>";
 echo "<table border='1'>";
 echo "<tr>";
+echo "<td>resource</td>";
 echo "<td>name</td>";
 echo "<td>desc</td>";
 echo "<td width='150'>due</td>";
@@ -290,6 +299,7 @@ echo "<td>shortUrl</td>";
 echo "</tr>";
 foreach($dataall as $key => $value){
 	//print_r($value);
+	echo "<td>CMS (คิง)</td>";
 	if($value->dueComplete == 'true'){
 		echo "<tr bgcolor='#33FF64'>";
 	}else{
