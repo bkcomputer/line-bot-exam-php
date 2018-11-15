@@ -1,6 +1,6 @@
 <?php
 
-$url = "https://api.trello.com/1/lists/5be2658aa5b1b615863f6d45/cards?key=de2dc6ea5b95210c5f7ab253415725f7&token=45abc962c53562b0610b6bcf1236ec645dfe9b1f01994469bd591393a1a23443"
+$url = "https://api.trello.com/1/lists/5be2658aa5b1b615863f6d45/cards?key=de2dc6ea5b95210c5f7ab253415725f7&token=45abc962c53562b0610b6bcf1236ec645dfe9b1f01994469bd591393a1a23443";
 			# init curl
 			$ch = curl_init();
 			curl_setopt($ch, CURLOPT_URL, $url);
