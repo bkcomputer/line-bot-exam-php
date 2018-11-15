@@ -104,7 +104,7 @@ echo "<td>shortUrl</td>";
 echo "</tr>";
 foreach($dataall as $key => $value){
 	//print_r($value);
-	if($value->due == 'true'){
+	if($value->dueComplete == 'true'){
 		echo "<tr color='#33FF64'>";
 	}else{
 		echo "<tr>";	
@@ -169,7 +169,7 @@ echo "<td>shortUrl</td>";
 echo "</tr>";
 foreach($dataall as $key => $value){
 	//print_r($value);
-	if($value->due == 'true'){
+	if($value->dueComplete == 'true'){
 		echo "<tr color='#33FF64'>";
 	}else{
 		echo "<tr>";	
@@ -229,7 +229,7 @@ echo "<td>shortUrl</td>";
 echo "</tr>";
 foreach($dataall as $key => $value){
 	//print_r($value);
-	if($value->due == 'true'){
+	if($value->dueComplete == 'true'){
 		echo "<tr color='#33FF64'>";
 	}else{
 		echo "<tr>";	
@@ -290,7 +290,7 @@ echo "<td>shortUrl</td>";
 echo "</tr>";
 foreach($dataall as $key => $value){
 	//print_r($value);
-	if($value->due == 'true'){
+	if($value->dueComplete == 'true'){
 		echo "<tr color='#33FF64'>";
 	}else{
 		echo "<tr>";	
