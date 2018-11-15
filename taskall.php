@@ -31,10 +31,24 @@ echo "<pre>";
 //print_r(json_decode($result));
 
 $dataall = json_decode($result);
-
+echo "<table>";
+echo "<tr>";
+echo "<td>name</td>";
+echo "<td>desc</td>";
+echo "<td>due</td>";
+echo "<td>dueComplete</td>";
+echo "<td>shortUrl</td>";
+echo "</tr>";
 foreach($dataall as $key => $value){
-	print_r($value);
+	//print_r($value);
+	echo "<tr>";
+	echo "<td>".$value['name']."</td>";
+	echo "<td>".$value['desc']."</td>";
+	echo "<td>".$value['due']."</td>";
+	echo "<td>".$value['dueComplete']."</td>";
+	echo "<td>".$value['shortUrl']."</td>";
+	echo "</tr>";
 }
-
+echo "</table>";
 
 ?>
