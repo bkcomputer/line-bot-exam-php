@@ -44,12 +44,13 @@ echo "<td>shortUrl</td>";
 echo "</tr>";
 foreach($dataall as $key => $value){
 	//print_r($value);
-	echo "<td>PM (โปเต้)</td>";
+	
 	if($value->dueComplete == 'true'){
 		echo "<tr bgcolor='#33FF64'>";
 	}else{
 		echo "<tr>";	
 	}
+	echo "<td>PM (โปเต้)</td>";
 	echo "<td>".$value->name."</td>";
 	echo "<td>".$value->desc."</td>";
 	echo "<td>".date('Y-M-d',strtotime($value->due))."</td>";
@@ -107,13 +108,13 @@ echo "<td>shortUrl</td>";
 echo "</tr>";
 foreach($dataall as $key => $value){
 	//print_r($value);
-	echo "<td>Designer (เพี้ยว)</td>";
+	
 	if($value->dueComplete == 'true'){
 		echo "<tr bgcolor='#33FF64'>";
 	}else{
 		echo "<tr>";	
 	}
-	
+	echo "<td>Designer (เพี้ยว)</td>";
 	echo "<td>".$value->name."</td>";
 	echo "<td>".$value->desc."</td>";
 	echo "<td>".date('Y-M-d',strtotime($value->due))."</td>";
@@ -174,12 +175,13 @@ echo "<td>shortUrl</td>";
 echo "</tr>";
 foreach($dataall as $key => $value){
 	//print_r($value);
-	echo "<td>IOS (ต้น)</td>";
+	
 	if($value->dueComplete == 'true'){
 		echo "<tr bgcolor='#33FF64'>";
 	}else{
 		echo "<tr>";	
 	}
+	echo "<td>IOS (ต้น)</td>";
 	echo "<td>".$value->name."</td>";
 	echo "<td>".$value->desc."</td>";
 	echo "<td>".date('Y-M-d',strtotime($value->due))."</td>";
@@ -236,12 +238,13 @@ echo "<td>shortUrl</td>";
 echo "</tr>";
 foreach($dataall as $key => $value){
 	//print_r($value);
-	echo "<td>android (เก่ง)</td>";
+	
 	if($value->dueComplete == 'true'){
 		echo "<tr bgcolor='#33FF64'>";
 	}else{
 		echo "<tr>";	
 	}
+	echo "<td>android (เก่ง)</td>";
 	echo "<td>".$value->name."</td>";
 	echo "<td>".$value->desc."</td>";
 	echo "<td>".date('Y-M-d',strtotime($value->due))."</td>";
@@ -299,12 +302,13 @@ echo "<td>shortUrl</td>";
 echo "</tr>";
 foreach($dataall as $key => $value){
 	//print_r($value);
-	echo "<td>CMS (คิง)</td>";
+	
 	if($value->dueComplete == 'true'){
 		echo "<tr bgcolor='#33FF64'>";
 	}else{
 		echo "<tr>";	
 	}
+	echo "<td>CMS (คิง)</td>";
 	echo "<td>".$value->name."</td>";
 	echo "<td>".$value->desc."</td>";
 	echo "<td>".date('Y-M-d',strtotime($value->due))."</td>";
