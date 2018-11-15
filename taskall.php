@@ -50,7 +50,7 @@ foreach($dataall as $key => $value){
 	}
 	echo "<td>".$value->name."</td>";
 	echo "<td>".$value->desc."</td>";
-	echo "<td>".date('Y-d-m',strtotime($value->due))."</td>";
+	echo "<td>".date('Y-M-d',strtotime($value->due))."</td>";
 	//echo "<td>".$value->dueComplete."</td>";
 	echo "<td>".$value->shortUrl."</td>";
 	echo "</tr>";
@@ -112,7 +112,7 @@ foreach($dataall as $key => $value){
 	
 	echo "<td>".$value->name."</td>";
 	echo "<td>".$value->desc."</td>";
-	echo "<td>".date('Y-d-m',strtotime($value->due))."</td>";
+	echo "<td>".date('Y-M-d',strtotime($value->due))."</td>";
 	//echo "<td>".$value->dueComplete."</td>";
 	echo "<td>".$value->shortUrl."</td>";
 	echo "</tr>";
@@ -176,7 +176,7 @@ foreach($dataall as $key => $value){
 	}
 	echo "<td>".$value->name."</td>";
 	echo "<td>".$value->desc."</td>";
-	echo "<td>".date('Y-d-m',strtotime($value->due))."</td>";
+	echo "<td>".date('Y-M-d',strtotime($value->due))."</td>";
 	//echo "<td>".$value->dueComplete."</td>";
 	echo "<td>".$value->shortUrl."</td>";
 	echo "</tr>";
@@ -236,7 +236,7 @@ foreach($dataall as $key => $value){
 	}
 	echo "<td>".$value->name."</td>";
 	echo "<td>".$value->desc."</td>";
-	echo "<td>".date('Y-d-m',strtotime($value->due))."</td>";
+	echo "<td>".date('Y-M-d',strtotime($value->due))."</td>";
 	//echo "<td>".$value->dueComplete."</td>";
 	echo "<td>".$value->shortUrl."</td>";
 	echo "</tr>";
@@ -297,7 +297,7 @@ foreach($dataall as $key => $value){
 	}
 	echo "<td>".$value->name."</td>";
 	echo "<td>".$value->desc."</td>";
-	echo "<td>".date('Y-d-m',strtotime($value->due))."</td>";
+	echo "<td>".date('Y-M-d',strtotime($value->due))."</td>";
 	//echo "<td>".$value->dueComplete."</td>";
 	echo "<td>".$value->shortUrl."</td>";
 	echo "</tr>";
