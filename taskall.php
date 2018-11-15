@@ -44,7 +44,7 @@ echo "</tr>";
 foreach($dataall as $key => $value){
 	//print_r($value);
 	//if($value->due == 'true'){
-		echo "<tr color='#33FF64'>";
+		echo "<tr bgcolor='#33FF64'>";
 	//}else{
 	//	echo "<tr>";	
 	//}
