@@ -22,6 +22,13 @@ $url = "https://api.trello.com/1/lists/5be2658aa5b1b615863f6d45/cards?key=de2dc6
 			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 			$result = curl_exec($ch);
 			curl_close($ch);
-			echo $result . "\r\n";
+
+
+
+			//echo $result . "\r\n";
+
+echo "<pre>";
+print_r(json_decode($result));
+
 
 ?>
