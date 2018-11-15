@@ -43,7 +43,11 @@ echo "<td>shortUrl</td>";
 echo "</tr>";
 foreach($dataall as $key => $value){
 	//print_r($value);
-	echo "<tr>";
+	if($value->due == 'true'){
+		echo "<tr color='#33FF64'>";
+	}else{
+		echo "<tr>";	
+	}
 	echo "<td>".$value->name."</td>";
 	echo "<td>".$value->desc."</td>";
 	echo "<td>".date('Y-d-m',strtotime($value->due))."</td>";
@@ -100,7 +104,12 @@ echo "<td>shortUrl</td>";
 echo "</tr>";
 foreach($dataall as $key => $value){
 	//print_r($value);
-	echo "<tr>";
+	if($value->due == 'true'){
+		echo "<tr color='#33FF64'>";
+	}else{
+		echo "<tr>";	
+	}
+	
 	echo "<td>".$value->name."</td>";
 	echo "<td>".$value->desc."</td>";
 	echo "<td>".date('Y-d-m',strtotime($value->due))."</td>";
@@ -160,7 +169,11 @@ echo "<td>shortUrl</td>";
 echo "</tr>";
 foreach($dataall as $key => $value){
 	//print_r($value);
-	echo "<tr>";
+	if($value->due == 'true'){
+		echo "<tr color='#33FF64'>";
+	}else{
+		echo "<tr>";	
+	}
 	echo "<td>".$value->name."</td>";
 	echo "<td>".$value->desc."</td>";
 	echo "<td>".date('Y-d-m',strtotime($value->due))."</td>";
@@ -216,7 +229,11 @@ echo "<td>shortUrl</td>";
 echo "</tr>";
 foreach($dataall as $key => $value){
 	//print_r($value);
-	echo "<tr>";
+	if($value->due == 'true'){
+		echo "<tr color='#33FF64'>";
+	}else{
+		echo "<tr>";	
+	}
 	echo "<td>".$value->name."</td>";
 	echo "<td>".$value->desc."</td>";
 	echo "<td>".date('Y-d-m',strtotime($value->due))."</td>";
@@ -273,7 +290,11 @@ echo "<td>shortUrl</td>";
 echo "</tr>";
 foreach($dataall as $key => $value){
 	//print_r($value);
-	echo "<tr>";
+	if($value->due == 'true'){
+		echo "<tr color='#33FF64'>";
+	}else{
+		echo "<tr>";	
+	}
 	echo "<td>".$value->name."</td>";
 	echo "<td>".$value->desc."</td>";
 	echo "<td>".date('Y-d-m',strtotime($value->due))."</td>";
