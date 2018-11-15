@@ -33,7 +33,7 @@ echo "<pre>";
 $dataall = json_decode($result);
 
 foreach($dataall as $key => $value){
-	print_r($value));
+	print_r($value);
 }
 
 
