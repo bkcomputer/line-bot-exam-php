@@ -28,7 +28,13 @@ $url = "https://api.trello.com/1/lists/5be2658aa5b1b615863f6d45/cards?key=de2dc6
 			//echo $result . "\r\n";
 
 echo "<pre>";
-print_r(json_decode($result));
+//print_r(json_decode($result));
+
+$dataall = json_decode($result);
+
+foreach($dataall as $key => $value){
+	print_r($value));
+}
 
 
 ?>
