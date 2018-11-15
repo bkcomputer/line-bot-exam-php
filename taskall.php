@@ -31,7 +31,7 @@ echo "<pre>";
 //print_r(json_decode($result));
 
 $dataall = json_decode($result);
-echo "<table>";
+echo "<table border="1">";
 echo "<tr>";
 echo "<td>name</td>";
 echo "<td>desc</td>";
@@ -45,7 +45,7 @@ foreach($dataall as $key => $value){
 	echo "<td>".$value->name."</td>";
 	echo "<td>".$value->desc."</td>";
 	echo "<td>".$value->due."</td>";
-	echo "<td>".$value->dueComplete."</td>";
+	echo "<td>".date('Y-d-m',$value->dueComplete)."</td>";
 	echo "<td>".$value->shortUrl."</td>";
 	echo "</tr>";
 }
