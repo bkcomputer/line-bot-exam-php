@@ -44,7 +44,7 @@ foreach($dataall as $key => $value){
 	echo "<tr>";
 	echo "<td>".$value->name."</td>";
 	echo "<td>".$value->desc."</td>";
-	echo "<td>".date('Y-d-m',$value->due)."</td>";
+	echo "<td>".date('Y-d-m',date('Y-m-d H:i:s', strtotime($value->due)))."</td>";
 	echo "<td>".$value->dueComplete."</td>";
 	echo "<td>".$value->shortUrl."</td>";
 	echo "</tr>";
