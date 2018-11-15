@@ -29,6 +29,6 @@ $url = "https://api.trello.com/1/lists/5be2658aa5b1b615863f6d45/cards?key=de2dc6
 			//echo 'This is error = '.$error .'<br />';
 
 			echo "<pre>";
-			print_r(json_encode($output));
+			print_r(json_decode($output));
 
 ?>
