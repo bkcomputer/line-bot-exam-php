@@ -31,7 +31,7 @@ echo "<pre>";
 //print_r(json_decode($result));
 
 $dataall = json_decode($result);
-echo "<table border="1">";
+echo "<table border='1'>";
 echo "<tr>";
 echo "<td>name</td>";
 echo "<td>desc</td>";
