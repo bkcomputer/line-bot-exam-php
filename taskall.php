@@ -284,5 +284,3 @@ foreach($dataall as $key => $value){
 echo "</table><hr>";
 
 ?>
-
-?>
