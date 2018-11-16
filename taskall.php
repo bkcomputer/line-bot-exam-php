@@ -35,8 +35,8 @@ $dataall = json_decode($result);
 //echo "PM (โปเต้)<br>";
 echo "<table border='1'>";
 echo "<tr>";
-echo "<td>resource</td>";
-echo "<td width='150'>due</td>";
+echo "<td width='100'>resource</td>";
+echo "<td width='100'>due</td>";
 echo "<td>name</td>";
 echo "<td>desc</td>";
 //echo "<td>dueComplete</td>";
@@ -58,7 +58,7 @@ foreach($dataall as $key => $value){
 	echo "<td>".$value->shortUrl."</td>";
 	echo "</tr>";
 }
-echo "</table><hr>";
+echo "</table>";
 
 
 
@@ -99,8 +99,8 @@ $dataall = json_decode($result);
 //echo "Designer (เพี้ยว)<br>";
 echo "<table border='1'>";
 echo "<tr>";
-echo "<td>resource</td>";
-echo "<td width='150'>due</td>";
+echo "<td width='100'>resource</td>";
+echo "<td width='100'>due</td>";
 echo "<td>name</td>";
 echo "<td>desc</td>";
 //echo "<td>dueComplete</td>";
@@ -122,7 +122,7 @@ foreach($dataall as $key => $value){
 	echo "<td>".$value->shortUrl."</td>";
 	echo "</tr>";
 }
-echo "</table><hr>";
+echo "</table>";
 
 
 
@@ -166,8 +166,8 @@ $dataall = json_decode($result);
 //echo "IOS (ต้น)<br>";
 echo "<table border='1'>";
 echo "<tr>";
-echo "<td>resource</td>";
-echo "<td width='150'>due</td>";
+echo "<td width='100'>resource</td>";
+echo "<td width='100'>due</td>";
 echo "<td>name</td>";
 echo "<td>desc</td>";
 //echo "<td>dueComplete</td>";
@@ -189,7 +189,7 @@ foreach($dataall as $key => $value){
 	echo "<td>".$value->shortUrl."</td>";
 	echo "</tr>";
 }
-echo "</table><hr>";
+echo "</table>";
 
 
 
@@ -229,8 +229,8 @@ $dataall = json_decode($result);
 //echo "android (เก่ง)<br>";
 echo "<table border='1'>";
 echo "<tr>";
-echo "<td>resource</td>";
-echo "<td width='150'>due</td>";
+echo "<td width='100'>resource</td>";
+echo "<td width='100'>due</td>";
 echo "<td>name</td>";
 echo "<td>desc</td>";
 //echo "<td>dueComplete</td>";
@@ -252,7 +252,7 @@ foreach($dataall as $key => $value){
 	echo "<td>".$value->shortUrl."</td>";
 	echo "</tr>";
 }
-echo "</table><hr>";
+echo "</table>";
 
 
 
@@ -293,8 +293,8 @@ $dataall = json_decode($result);
 //echo "CMS (คิง)<br>";
 echo "<table border='1'>";
 echo "<tr>";
-echo "<td>resource</td>";
-echo "<td width='150'>due</td>";
+echo "<td width='100'>resource</td>";
+echo "<td width='100'>due</td>";
 echo "<td>name</td>";
 echo "<td>desc</td>";
 //echo "<td>dueComplete</td>";
@@ -316,6 +316,6 @@ foreach($dataall as $key => $value){
 	echo "<td>".$value->shortUrl."</td>";
 	echo "</tr>";
 }
-echo "</table><hr>";
+echo "</table>";
 
 ?>
