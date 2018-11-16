@@ -151,11 +151,11 @@ if (!is_null($events['events'])) {
 
 
 				}
-				if (strpos($event['message']['text'], '@Asynchronous') !== false) {
+				if (strpos($event['message']['text'], 'Asynchronous') !== false) {
 					$board = "5bee8458b952f719343aae26";
 
 					$url = 'https://api.trello.com/1/cards?name=';
-					$url .= urlencode('@Asynchronous').$head;
+					$url .= urlencode('Asynchronous').$head;
 
 					$url .='&desc=' . $event['source']['userId'];
 					$url .= urlencode($fullText);
