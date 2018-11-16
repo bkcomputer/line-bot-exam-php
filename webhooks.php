@@ -95,7 +95,7 @@ if (!is_null($events['events'])) {
 				//5bdc07424a0dda5b0a113620 Deploy @Poo_za
 
 				$board = "";
-				if (strpos($event['message']['text'], '@➰°PookPick°➿') !== false) {
+				if (strpos($event['message']['text'], 'PookPick') !== false) {
 					$board = "5bdc072ae0605e78a05a92c5";
 
 					$url = 'https://api.trello.com/1/cards?name=';
