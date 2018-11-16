@@ -119,7 +119,40 @@ if (!is_null($events['events'])) {
 				
 				
 				 
-				
+				if (strpos($event['message']['text'], '@BANK DEV') !== false) {
+				    $board = "5bee843c8788167f2e52f516";
+
+				    $url = 'https://api.trello.com/1/cards?name=';
+				    $url .= urlencode('@BANK DEV').$head;
+
+
+				    $url .='&desc=';
+
+
+
+				    $url .= urlencode($fullText);
+
+
+				    $url .='&idList=';
+				    $url .=$board;
+				    $due = $duedate;
+				    $url .='&pos=top&due=' . $due;
+				    $url .='&keepFromSource=all&key=de2dc6ea5b95210c5f7ab253415725f7&token=45abc962c53562b0610b6bcf1236ec645dfe9b1f01994469bd591393a1a23443';
+
+
+				    $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+				    $ch = curl_init($url);
+				    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+				    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+				    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+				    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+				    $result = curl_exec($ch);
+				    curl_close($ch);
+
+
+
+				} 
 				
 				if (strpos($event['message']['text'], '@Ton') !== false) {
 					$board = "5bee8458b952f719343aae26";
@@ -273,40 +306,7 @@ if (!is_null($events['events'])) {
 				}
 				
 				
-				if (strpos($event['message']['text'], '@BANK DEV') !== false) {
-				    $board = "5bee843c8788167f2e52f516";
-
-				    $url = 'https://api.trello.com/1/cards?name=';
-				    $url .= urlencode('@BANK DEV').$head;
-
-
-				    $url .='&desc=';
-
-
-
-				    $url .= urlencode($fullText);
-
-
-				    $url .='&idList=';
-				    $url .=$board;
-				    $due = $duedate;
-				    $url .='&pos=top&due=' . $due;
-				    $url .='&keepFromSource=all&key=de2dc6ea5b95210c5f7ab253415725f7&token=45abc962c53562b0610b6bcf1236ec645dfe9b1f01994469bd591393a1a23443';
-
-
-				    $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
-				    $ch = curl_init($url);
-				    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-				    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
-				    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-				    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-				    $result = curl_exec($ch);
-				    curl_close($ch);
-
-
-
-				} 
+				
 				
 				
 				if (strpos($event['message']['text'], '@Pure') !== false) {
