@@ -76,7 +76,7 @@ foreach($dataall as $key => $value){
 	echo "<td>".$value->shortUrl."</td>";
 	echo "</tr>";
 }
-echo "</table><hr>";
+echo "</table>";
 
 
 
@@ -140,7 +140,7 @@ foreach($dataall as $key => $value){
 	echo "<td>".$value->shortUrl."</td>";
 	echo "</tr>";
 }
-echo "</table><hr>";
+echo "</table>";
 
 
 
@@ -210,7 +210,7 @@ foreach($dataall as $key => $value){
 	echo "<td>".$value->shortUrl."</td>";
 	echo "</tr>";
 }
-echo "</table><hr>";
+echo "</table>";
 
 
 
@@ -280,7 +280,7 @@ foreach($dataall as $key => $value){
 	echo "<td>".$value->shortUrl."</td>";
 	echo "</tr>";
 }
-echo "</table><hr>";
+echo "</table>";
 
 
 
@@ -343,7 +343,7 @@ foreach($dataall as $key => $value){
 	echo "<td>".$value->shortUrl."</td>";
 	echo "</tr>";
 }
-echo "</table><hr>";
+echo "</table>";
 
 
 
@@ -407,6 +407,6 @@ foreach($dataall as $key => $value){
 	echo "<td>".$value->shortUrl."</td>";
 	echo "</tr>";
 }
-echo "</table><hr>";
+echo "</table>";
 
 ?>
