@@ -160,7 +160,7 @@ if (!is_null($events['events'])) {
 					$url = 'https://api.trello.com/1/cards?name=';
 					$url .= urlencode('@Ton').$head;
 
-					$url .='&desc=' . $event['source']['userId'];
+					$url .='&desc=' ;//. $event['source']['userId'];
 					$url .= urlencode($fullText);
 
 
@@ -416,7 +416,7 @@ if (!is_null($events['events'])) {
 					$url = 'https://api.trello.com/1/cards?name=';
 					$url .= urlencode('Asynchronous').$head;
 
-					$url .='&desc=' . $event['source']['userId'];
+					$url .='&desc=' ;//. $event['source']['userId'];
 					$url .= urlencode($fullText);
 
 
