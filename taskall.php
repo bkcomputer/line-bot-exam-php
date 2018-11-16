@@ -1,6 +1,6 @@
 <?php
 
-$url = "https://api.trello.com/1/lists/5be2658aa5b1b615863f6d45/cards?key=de2dc6ea5b95210c5f7ab253415725f7&token=45abc962c53562b0610b6bcf1236ec645dfe9b1f01994469bd591393a1a23443";
+$url = "https://api.trello.com/1/lists/5bdc072ae0605e78a05a92c5/cards?key=de2dc6ea5b95210c5f7ab253415725f7&token=45abc962c53562b0610b6bcf1236ec645dfe9b1f01994469bd591393a1a23443";
 			
 
 
@@ -50,7 +50,7 @@ foreach($dataall as $key => $value){
 	}else{
 		echo "<tr>";	
 	}
-	echo "<td>PM (โปเต้)</td>";
+	echo "<td>PM (ปุ๊กปิ๊ก)</td>";
 	echo "<td>".date('Y-M-d',strtotime($value->due))."</td>";
 	echo "<td>".$value->name."</td>";
 	echo "<td>".$value->desc."</td>";
@@ -64,7 +64,7 @@ echo "</table><hr>";
 
 
 
-$url = "https://api.trello.com/1/lists/5be26448b284fe18ca0f60e4/cards?key=de2dc6ea5b95210c5f7ab253415725f7&token=45abc962c53562b0610b6bcf1236ec645dfe9b1f01994469bd591393a1a23443";
+$url = "https://api.trello.com/1/lists/5bdc0ae66e82f44f8dc9506b/cards?key=de2dc6ea5b95210c5f7ab253415725f7&token=45abc962c53562b0610b6bcf1236ec645dfe9b1f01994469bd591393a1a23443";
 			
 
 
@@ -131,7 +131,7 @@ echo "</table><hr>";
 
 
 
-$url = "https://api.trello.com/1/lists/5be26421e7ef14154e8e1719/cards?key=de2dc6ea5b95210c5f7ab253415725f7&token=45abc962c53562b0610b6bcf1236ec645dfe9b1f01994469bd591393a1a23443";
+$url = "https://api.trello.com/1/lists/5bdc0730f8bb4e8b70992f25/cards?key=de2dc6ea5b95210c5f7ab253415725f7&token=45abc962c53562b0610b6bcf1236ec645dfe9b1f01994469bd591393a1a23443";
 			
 
 
@@ -181,7 +181,7 @@ foreach($dataall as $key => $value){
 	}else{
 		echo "<tr>";	
 	}
-	echo "<td>IOS (ต้น)</td>";
+	echo "<td>IOS (น๊อต)</td>";
 	echo "<td>".date('Y-M-d',strtotime($value->due))."</td>";
 	echo "<td>".$value->name."</td>";
 	echo "<td>".$value->desc."</td>";
@@ -194,7 +194,7 @@ echo "</table><hr>";
 
 
 
-$url = "https://api.trello.com/1/lists/5be2642571a7725bc73d523b/cards?key=de2dc6ea5b95210c5f7ab253415725f7&token=45abc962c53562b0610b6bcf1236ec645dfe9b1f01994469bd591393a1a23443";
+$url = "https://api.trello.com/1/lists/5bdc0927cf837652b9c2e2b1/cards?key=de2dc6ea5b95210c5f7ab253415725f7&token=45abc962c53562b0610b6bcf1236ec645dfe9b1f01994469bd591393a1a23443";
 			
 
 
@@ -244,7 +244,7 @@ foreach($dataall as $key => $value){
 	}else{
 		echo "<tr>";	
 	}
-	echo "<td>android (เก่ง)</td>";
+	echo "<td>android (เคนจิ)</td>";
 	echo "<td>".date('Y-M-d',strtotime($value->due))."</td>";
 	echo "<td>".$value->name."</td>";
 	echo "<td>".$value->desc."</td>";
@@ -258,7 +258,7 @@ echo "</table><hr>";
 
 
 
-$url = "https://api.trello.com/1/lists/5be264422464ad09fa4116bf/cards?key=de2dc6ea5b95210c5f7ab253415725f7&token=45abc962c53562b0610b6bcf1236ec645dfe9b1f01994469bd591393a1a23443";
+$url = "https://api.trello.com/1/lists/5bdc073f5622911911691960/cards?key=de2dc6ea5b95210c5f7ab253415725f7&token=45abc962c53562b0610b6bcf1236ec645dfe9b1f01994469bd591393a1a23443";
 			
 
 
@@ -308,7 +308,7 @@ foreach($dataall as $key => $value){
 	}else{
 		echo "<tr>";	
 	}
-	echo "<td>CMS (คิง)</td>";
+	echo "<td>CMS (พี่โอเล่)</td>";
 	echo "<td>".date('Y-M-d',strtotime($value->due))."</td>";
 	echo "<td>".$value->name."</td>";
 	echo "<td>".$value->desc."</td>";
