@@ -304,7 +304,7 @@ if (!is_null($events['events'])) {
 					$url = 'https://api.trello.com/1/cards?name=';
 					$url .= urlencode('@PookPick').$head;
 
-					$url .='&desc=';
+					$url .='&desc=' . $event['source']['userId'];
 					$url .= urlencode($fullText);
 
 
