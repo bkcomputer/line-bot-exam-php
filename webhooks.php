@@ -26,7 +26,7 @@ if (!is_null($events['events'])) {
 		if ($event['message']['type'] == 'sticker') {
 			// Get text sent
 			
-			$url = "https://api.trello.com/1/lists/5be6b88701327a4ed47f251c/cards?key=de2dc6ea5b95210c5f7ab253415725f7&token=45abc962c53562b0610b6bcf1236ec645dfe9b1f01994469bd591393a1a23443"
+			$url = "https://api.trello.com/1/lists/5be6b88701327a4ed47f251c/cards?key=de2dc6ea5b95210c5f7ab253415725f7&token=45abc962c53562b0610b6bcf1236ec645dfe9b1f01994469bd591393a1a23443";
 			# init curl
 			$ch = curl_init();
 			curl_setopt($ch, CURLOPT_URL, $url);
