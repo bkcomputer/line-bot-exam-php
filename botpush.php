@@ -13,10 +13,20 @@ $pushID = 'C330aac644f741be04358c14de9ca0d2a';//'Ue5012e668f8c66f02959ac9c23cc3d
 $httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
 $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
 
-$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('แอบคุยกับกิ๊กหรอค่ะ');
-$response = $bot->pushMessage($pushID, $textMessageBuilder);
 
-echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
+$response = $bot->getProfile('Ue5012e668f8c66f02959ac9c23cc3d4b');
+if ($response->isSucceeded()) {
+    $profile = $response->getJSONDecodedBody();
+    $text = $profile['displayName'] . $profile['statusMessage'];
+
+    $textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder($text);
+    $response = $bot->pushMessage($pushID, $textMessageBuilder);
+
+    echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
+   
+}
+
+
 
 
 
