@@ -17,7 +17,7 @@ $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
 $response = $bot->getProfile('Ue5012e668f8c66f02959ac9c23cc3d4b');
 if ($response->isSucceeded()) {
     $profile = $response->getJSONDecodedBody();
-    $text = "@". $profile['displayName'] ." \n\". $profile['statusMessage'];
+    $text = "@". $profile['displayName'] ." \\n". $profile['statusMessage'];
 
     $textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder($text);
     $response = $bot->pushMessage($pushID, $textMessageBuilder);
