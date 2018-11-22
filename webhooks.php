@@ -545,7 +545,7 @@ if (!is_null($events['events'])) {
 			$url .= urlencode('@KinG`Genesis').$head;
 			
 			//$url .= $event['source']['userId'];
-			$url .='&desc='.$text;
+			$url .='&desc=';//.$text;
 			
 			
 			
