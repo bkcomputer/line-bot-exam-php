@@ -1,0 +1,34 @@
+[
+  {
+    "profile_url": "http://www.google.com",
+    "username": "a85",
+    "password": "blah",
+    "userlogin": "pongsakorn.p",
+    "textmessage":"hello",
+    "trackingscg":"120217172740"
+  },
+  {
+    "profile_url": "http://www.getpostman.com",
+    "username": "larry",
+    "userlogin": "Bunhan321",
+    "password": "nocolors",
+    "textmessage":"good moring",
+    "trackingscg":"1200065156711"
+  },
+  {
+    "profile_url": "http://www.getpostman.com",
+    "username": "larry",
+    "userlogin": "Bunhan444",
+    "password": "nocolors",
+    "textmessage":"my name is Bot Bank",
+    "trackingscg":"1200065156711"
+  },
+  {
+    "profile_url": "http://www.getpostman.com",
+    "username": "larry",
+    "userlogin": "Bunhan",
+    "password": "nocolors",
+    "textmessage":"Nice to meet You.",
+    "trackingscg":"120217172740"
+  }
+]

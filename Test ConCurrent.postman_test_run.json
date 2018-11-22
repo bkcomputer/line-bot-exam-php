@@ -1,0 +1,145 @@
+{
+	"id": "fcf9c220-d6db-4919-b0e5-9661929c104a",
+	"name": "Test ConCurrent",
+	"allTests": [],
+	"timestamp": "2018-11-21T09:28:15.207Z",
+	"collection_id": "e582174e-faaa-4e01-b13a-d914683945db",
+	"folder_id": 0,
+	"target_type": "collection",
+	"environment_id": "0",
+	"data": [],
+	"delay": 0,
+	"count": 10,
+	"collection": {
+		"id": "e582174e-faaa-4e01-b13a-d914683945db",
+		"name": "Test ConCurrent",
+		"description": "",
+		"auth": null,
+		"events": null,
+		"variables": [],
+		"order": [
+			"7a396b22-8944-49a9-b815-99b592b27c65"
+		],
+		"folders_order": [],
+		"owner": "61698",
+		"permissions": {},
+		"favorite": false,
+		"shared": false,
+		"type": "collection",
+		"depth": 0
+	},
+	"folder": null,
+	"environment": null,
+	"globals": [
+		{
+			"key": "echo_digest_realm",
+			"type": "text",
+			"value": "Users",
+			"enabled": true
+		},
+		{
+			"key": "echo_digest_nonce",
+			"type": "text",
+			"value": "YSeik42DPMPTcPRoGe6oi44nYic0gRBG",
+			"enabled": true
+		}
+	],
+	"results": [
+		{
+			"name": "tracking",
+			"id": "7a396b22-8944-49a9-b815-99b592b27c65",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 10,
+					"fail": 0
+				}
+			},
+			"times": [
+				"1227",
+				"83",
+				"77",
+				"96",
+				"75",
+				"71",
+				"64",
+				"85",
+				"83",
+				"66"
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				}
+			],
+			"time": "66",
+			"totalRequestTime": 1927,
+			"iterationResults": {}
+		}
+	],
+	"totalPass": 10,
+	"totalFail": 0,
+	"totalTime": 1927,
+	"lifecycle": "done",
+	"requests": [
+		{
+			"name": "tracking",
+			"id": "7a396b22-8944-49a9-b815-99b592b27c65",
+			"url": "http://c2.scgexpress.co.th/dbhelper/query",
+			"time": "66",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 10,
+					"fail": 0
+				}
+			}
+		}
+	],
+	"synced": false
+}
