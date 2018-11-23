@@ -58,7 +58,7 @@ if (!is_null($events['events'])) {
 		//}
 		
 		//
-		if ( ($event['source']['userId'] == "U5cd8ea45e804c64bd7d03a28225f48a8" || $event['source']['userId'] == "Ue5012e668f8c66f02959ac9c23cc3d4b" )&& $event['type'] == 'message' && $event['message']['type'] == 'text' && strpos($event['message']['text'], 'due') !== false ) {//&& (strpos($event['message']['text'], 'due') !== false)
+		if ( ($event['source']['userId'] == "U5cd8ea45e804c64bd7d03a28225f48a8") && $event['type'] == 'message' && $event['message']['type'] == 'text'  ) {     //    && strpos($event['message']['text'], 'due') !== false     || $event['source']['userId'] == "Ue5012e668f8c66f02959ac9c23cc3d4b"   //&& (strpos($event['message']['text'], 'due') !== false)
 			// Get text sent
 			$text = $event['source']['userId'];
 			// Get replyToken
