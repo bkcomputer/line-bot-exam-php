@@ -50,7 +50,7 @@ if (!is_null($events['events'])) {
 		//$time = "";
 		//try {
 		  //echo substr($event['message']['text'], -10);  // bcd
-		  $time = substr($event['message']['text'], -10);
+		  $time = date('Y-m-d');//substr($event['message']['text'], -10);
 		  
 		//} catch (Exception $e) {
 		//  $time = "";
@@ -64,33 +64,33 @@ if (!is_null($events['events'])) {
 			// Get replyToken
                         $replyToken = $event['replyToken'];
 			
-			if(!checkIsAValidDate($time)){
+// 			if(!checkIsAValidDate($time)){
 				
-				$url = 'https://api.line.me/v2/bot/message/reply';
-				$arr_text = array("บรีฟวันนี้ เอาวันนี้ ..... ใครจะทำทันจ๊ะ!!!!!!","กำหนดวันให้ชัดเจนหน่อยจ้า","รีบแบบนี้ บรีฟตั้งแต่เมื่อวานสิจ๊ะ","บรีฟด่วน บรีฟเร่ง ขอให้บอก");
-				$messages = [
-				    'type' => 'text',
-				    'text' => $arr_text[mt_rand(0,3)]
-				];
-				$data = [
-				    'replyToken' => $replyToken,
-				    'messages' => [$messages],
-				];
-				$post = json_encode($data);
-				$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+// 				$url = 'https://api.line.me/v2/bot/message/reply';
+// 				$arr_text = array("บรีฟวันนี้ เอาวันนี้ ..... ใครจะทำทันจ๊ะ!!!!!!","กำหนดวันให้ชัดเจนหน่อยจ้า","รีบแบบนี้ บรีฟตั้งแต่เมื่อวานสิจ๊ะ","บรีฟด่วน บรีฟเร่ง ขอให้บอก");
+// 				$messages = [
+// 				    'type' => 'text',
+// 				    'text' => $arr_text[mt_rand(0,3)]
+// 				];
+// 				$data = [
+// 				    'replyToken' => $replyToken,
+// 				    'messages' => [$messages],
+// 				];
+// 				$post = json_encode($data);
+// 				$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 
-				$ch = curl_init($url);
-				curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-				curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-				curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
-				curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-				curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-				$result = curl_exec($ch);
-				curl_close($ch);
+// 				$ch = curl_init($url);
+// 				curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+// 				curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+// 				curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+// 				curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+// 				curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+// 				$result = curl_exec($ch);
+// 				curl_close($ch);
 
-				echo $result . "\r\n";	
+// 				echo $result . "\r\n";	
 				
-			}else{
+// 			}else{
 			
 
 				$duedate = urlencode(date('Y-m-d H:i:s', strtotime($time) + (0)));//86400
@@ -443,7 +443,7 @@ if (!is_null($events['events'])) {
 
 				}
            
-			}	
+			//}	
 			
 		}
 	}
