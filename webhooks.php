@@ -165,7 +165,7 @@ if (!is_null($events['events'])) {
 				/*-----------------------------------*/
 				
 				
-				if (strpos($event['message']['text'], '@เสี่ยหมี') !== false) {
+				if (strpos($event['message']['text'], '@เสี่ยหมี') !== false || strpos($event['message']['text'], 'WEB') !== false || strpos($event['message']['text'], 'BOOKING') !== false) {
 				    $board = "5bee84510c501365fc33e239";
 
 				    $url = 'https://api.trello.com/1/cards?name=';
@@ -201,7 +201,7 @@ if (!is_null($events['events'])) {
 				} 
 				
 				
-				if (strpos($event['message']['text'], '@iSymphonyz') !== false) {
+				if (strpos($event['message']['text'], '@iSymphonyz') !== false || strpos($event['message']['text'], 'Android') !== false) {
 				    $board = "5bee845abafecb5e7a0538b2";
 
 				    $url = 'https://api.trello.com/1/cards?name=';
@@ -236,7 +236,7 @@ if (!is_null($events['events'])) {
 
 
 				} 
-				if (strpos($event['message']['text'], '@ZamPotter') !== false) {
+				if (strpos($event['message']['text'], '@ZamPotter') !== false || strpos($event['message']['text'], 'Front') !== false) {
 				    $board = "5bee84500592f013bb62b0b9";
 
 				    $url = 'https://api.trello.com/1/cards?name=';
@@ -280,7 +280,7 @@ if (!is_null($events['events'])) {
 				
 				
 				
-				if (strpos($event['message']['text'], '@Pure') !== false) {
+				if (strpos($event['message']['text'], '@Pure') !== false || strpos($event['message']['text'], 'Design') !== false) {
 				    $board = "5bee84408a10ca10ce4ceaa0";
 
 				    $url = 'https://api.trello.com/1/cards?name=';
@@ -314,7 +314,7 @@ if (!is_null($events['events'])) {
 
 				} 
 				
-				if (strpos($event['message']['text'], '@por😇 0844664662😍') !== false) {
+				if (strpos($event['message']['text'], '@por😇 0844664662😍') !== false || strpos($event['message']['text'], 'Data') !== false) {
 				    $board = "5bee843c8788167f2e52f516";
 
 				    $url = 'https://api.trello.com/1/cards?name=';
@@ -349,7 +349,7 @@ if (!is_null($events['events'])) {
 
 				} 
 				
-				if (strpos($event['message']['text'], 'Asynchronous') !== false) {
+				if (strpos($event['message']['text'], 'Asynchronous') !== false || strpos($event['message']['text'], 'IOS2') !== false) {
 					$board = "5bee8458b952f719343aae26";
 
 					$url = 'https://api.trello.com/1/cards?name=';
@@ -379,7 +379,7 @@ if (!is_null($events['events'])) {
 
 
 				}
-				if (strpos($event['message']['text'], "@'aukaik'") !== false) {
+				if (strpos($event['message']['text'], "@'aukaik'") !== false || strpos($event['message']['text'], 'AW') !== false) {
 				    $board = "5bee84408a10ca10ce4ceaa0";
 
 				    $url = 'https://api.trello.com/1/cards?name=';
@@ -412,7 +412,7 @@ if (!is_null($events['events'])) {
 
 
 				} 
-				if (strpos($event['message']['text'], '@Ton') !== false) {
+				if (strpos($event['message']['text'], '@Ton' || strpos($event['message']['text'], 'IOS1') !== false) !== false) {
 					$board = "5bee8458b952f719343aae26";
 
 					$url = 'https://api.trello.com/1/cards?name=';
