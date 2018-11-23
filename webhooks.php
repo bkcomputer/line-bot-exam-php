@@ -201,7 +201,7 @@ if (!is_null($events['events'])) {
 				} 
 				
 				
-				if (strpos($event['message']['text'], '@iSymphonyz') !== false || strpos($event['message']['text'], 'Android') !== false) {
+				if (strpos($event['message']['text'], '@iSymphonyz') !== false || strpos($event['message']['text'], 'ANDROID') !== false) {
 				    $board = "5bee845abafecb5e7a0538b2";
 
 				    $url = 'https://api.trello.com/1/cards?name=';
@@ -236,7 +236,7 @@ if (!is_null($events['events'])) {
 
 
 				} 
-				if (strpos($event['message']['text'], '@ZamPotter') !== false || strpos($event['message']['text'], 'Front') !== false) {
+				if (strpos($event['message']['text'], '@ZamPotter') !== false || strpos($event['message']['text'], 'FRONT') !== false) {
 				    $board = "5bee84500592f013bb62b0b9";
 
 				    $url = 'https://api.trello.com/1/cards?name=';
@@ -280,7 +280,7 @@ if (!is_null($events['events'])) {
 				
 				
 				
-				if (strpos($event['message']['text'], '@Pure') !== false || strpos($event['message']['text'], 'Design') !== false) {
+				if (strpos($event['message']['text'], '@Pure') !== false || strpos($event['message']['text'], 'DESIGN') !== false) {
 				    $board = "5bee84408a10ca10ce4ceaa0";
 
 				    $url = 'https://api.trello.com/1/cards?name=';
@@ -314,7 +314,7 @@ if (!is_null($events['events'])) {
 
 				} 
 				
-				if (strpos($event['message']['text'], '@por😇 0844664662😍') !== false || strpos($event['message']['text'], 'Data') !== false) {
+				if (strpos($event['message']['text'], '@por😇 0844664662😍') !== false || strpos($event['message']['text'], 'DATA') !== false) {
 				    $board = "5bee843c8788167f2e52f516";
 
 				    $url = 'https://api.trello.com/1/cards?name=';
@@ -412,7 +412,7 @@ if (!is_null($events['events'])) {
 
 
 				} 
-				if (strpos($event['message']['text'], '@Ton' || strpos($event['message']['text'], 'IOS1') !== false) !== false) {
+				if (strpos($event['message']['text'], '@Ton' || strpos($event['message']['text'], 'IOS') !== false) !== false) {
 					$board = "5bee8458b952f719343aae26";
 
 					$url = 'https://api.trello.com/1/cards?name=';
