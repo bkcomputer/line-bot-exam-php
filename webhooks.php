@@ -29,8 +29,8 @@ if (!is_null($events['events'])) {
 			$address = ($event['message']);
 			
 			$botrecive = "Address : " . $event['message']['address'];
-			$botrecive .= "\nLat : " . $event['message']['latitude];
-			$botrecive .= "\nLong : " . $event['message']['longitude];
+			$botrecive .= "\nLat : " . $event['message']['latitude'];
+			$botrecive .= "\nLong : " . $event['message']['longitude'];
 			
 			
 			
