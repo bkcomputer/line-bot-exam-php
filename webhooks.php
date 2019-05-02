@@ -14,8 +14,8 @@ if (!is_null($events['events'])) {
 	// Loop through each event
 	foreach ($events['events'] as $event) {
 		// Reply only when message sent is in 'text' format
-		if(true){
-		//if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
+		//if(true){
+		if ($event['type'] == 'message' && $event['message']['type'] == 'location') {
 			// Get text sent
 			$text = $event['source']['userId'];
 			// Get replyToken
@@ -26,14 +26,18 @@ if (!is_null($events['events'])) {
 
 			//$head = urlencode($event['message']['text'])."-".date('m/d/Y');
 			
+			$address = ($event['message']);
 			
+			$botrecive = "Address : " . $event['message']['address];
+			$botrecive .= "\nLat : " . $event['message']['latitude];
+			$botrecive .= "\nLong : " . $event['message']['longitude];
 			
 			
 			
 			
 			$messages = [
 				'type' => 'text',
-				'text' => $content
+				'text' => $address
 			];
 			
 			// Make a POST Request to Messaging API to reply to sender
